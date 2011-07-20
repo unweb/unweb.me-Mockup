@@ -1,8 +1,12 @@
 $(document).ready(function(){
+  
+  /* SLIDESHOW */
+  
   var currentPosition = 0;
   var slideWidth = $('.slide').outerWidth(true);
   var slides = $('.slide');
   var numberOfSlides = slides.length;
+  var timeout;
 
   // Remove scrollbar in JS
   $('#slidesContainer').css('overflow', 'hidden');
@@ -65,6 +69,15 @@ $(document).ready(function(){
     // Set sliding timeout.
     var autoSlideTimeout = setInterval(function() {
       transition('right');
-    }, 6000)
-  }
-  });
+    }, 6000);
+    
+    // Bind to resize event
+    $(window).resize(function() {
+      clearTimeout(timeout);
+      timeout = setTimeout(function() {
+        slideWidth = $('.slide').outerWidth(true);
+        slides = $('.slide');
+      }, 200);
+    });
+  } 
+});
