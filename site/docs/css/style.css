@@ -1,0 +1,466 @@
+/*	Less Framework 4
+	http://lessframework.com
+	by Joni Korpi
+	License: http://opensource.org/licenses/mit-license.php	*/
+
+
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+a img {border: 0;}
+
+
+
+/*	Typography presets
+	------------------	*/
+
+.gigantic {
+	font-size: 110px;
+	line-height: 120px;
+	letter-spacing: -2px;
+}
+
+.huge, h1 {
+	font-size: 68px;
+	line-height: 72px;
+	letter-spacing: -1px;
+}
+
+.large, h2 {
+	font-size: 42px;
+	line-height: 48px;
+}
+
+.bigger, h3 {
+	font-family: BitstreamVeraSansRoman, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 22px;
+	letter-spacing:-1px;
+	line-height: 32px;
+}
+
+.big, h4 {
+	font-family: Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 26px;
+	text-decoration:none;
+}
+
+body {
+	font: 14px/20px Helvetica, serif;
+}
+
+.small, small {
+	font-family: Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 9px;
+	line-height: 14px;
+}
+
+.special {
+	font-family: BitstreamVeraSansRoman, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	text-decoration:none;
+}
+
+/* Selection colours (easy to forget) */
+
+::selection 	 	{background: rgb(255,255,158);}
+::-moz-selection 	{background: rgb(255,255,158);}
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+body {-webkit-tap-highlight-color: rgb(255,255,158);}
+
+
+
+/*		Default Layout: 992px. 
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+body {
+	background: #f1f1f1;
+	color: rgb(40,40,40);
+	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+
+/* (almost) All elements.. */
+/* Here our main column width is applied to all the elements. The
+  ones that span the whole screen are either not defined here or
+  use wrappers which get the CSS properties */
+
+#top-bar, #header, #image-slider, #main, #logos, #footer {
+	position: relative;
+	width: 896px;
+	margin: 0 auto;
+}
+
+#main, #logos, #footer {
+	padding:1em 0;
+}
+
+#main, #logos, #footer {
+	overflow:auto;
+}
+
+/* Top Bar */
+
+#top-bar-outer {
+	background: #fafafa;
+	padding:2px 0;
+}
+
+#top-bar {
+	text-align:right;
+}
+
+/* Header */
+
+#header-outer {
+	
+	width: 100%;
+	background: #fafafa;
+}
+
+#header {
+	height: 146px;
+	overflow: hidden;
+}
+
+#header-logo {
+	padding: 18px 0 0;
+	float: left;
+}
+
+/* Navigation */
+
+#list-nav {
+	float: right;
+	vertical-align: bottom;
+}
+
+#list-nav li {
+	display:block;
+	float:left;
+	list-style-type: none;
+	padding: 118px 22px 11px  22px;
+	margin: 0;
+	border-left: solid 1px #fafafa;
+	border-right: solid 1px #fafafa;
+}
+
+#list-nav a {
+	color: #707070;
+}
+
+#list-nav li:hover {
+	border-left: solid 1px #ccc;
+	border-right: solid 1px #ccc;
+	color:#222;
+}
+
+#list-nav .active {
+	color:#fff;
+	background: #444 url("../../images/background-3.png");
+	background-position: bottom left;
+	border-left: solid 1px #bbb;
+	border-right: solid 1px #bbb;
+}
+
+#list-nav li.active {
+	color:#fff;
+}
+
+/* Image Slider */
+
+#slider-wrapper {
+	background:#252525;
+}
+
+#slideshow #slidesContainer {
+  margin:0 auto;
+  width:896px;
+  height:320px;
+  overflow-x:hidden;
+  overflow-y:auto; /* allow scrollbar */
+  position:relative;
+}
+
+#slideshow #slidesContainer .slide {
+  margin:0 auto;
+  width:896px; /* reduce by 20 pixels to avoid horizontal scroll */
+  height:280px;
+  position:relative;
+  color: #fafafa;
+}
+
+#slideshow #slidesContainer .slide p {
+  width: 252px;
+}
+
+#slideshow #slidesContainer .slide img {
+  position:absolute;
+  right:0px;
+  top:0px;
+  width: 620px;
+}
+
+/* Controls */
+.control {
+  display:block;
+  width:20px;
+  height:20px;
+  text-indent:-10000px;
+  position:absolute;
+  cursor: pointer;
+  z-index:1000;
+}
+
+#leftControl {
+  top:150px;
+  left:-28px;
+  background:transparent url(../../images/slider/control_left.jpg) no-repeat 0 0;
+}
+#rightControl {
+  top:150px;
+  right:-28px;
+  background:transparent url(../../images/slider/control_right.jpg) no-repeat 0 0;
+}
+
+/* Main */
+
+#main {
+	background: transparent url("../../images/shade.jpg");
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+
+.column {
+	width: 252px;
+	margin:0 24px 0 0;
+	float:left;
+}
+
+.wide {
+	width: 344px;
+}
+
+.last {
+	margin:0;
+}
+
+.column-title {
+	margin: 12px 0;
+	border-bottom:1px solid #aaa;
+	padding: 10px 0;
+}
+
+.column .column-title {
+	text-shadow: white 3px 3px 0;
+}
+
+.column-image {
+	display:block;
+	margin:8px auto;
+	padding: 14px;
+	border: 1px solid #cacaca;
+}
+
+/* Logo Section */
+
+#logo-wrapper {
+	width:960px;
+	margin:0 auto;
+}
+
+.logo {
+	background: url("../../images/background-2.png");
+	float: left;
+	padding: 20px 76px;
+	margin: 8px;
+	border: 1px solid #fff;
+}
+
+/* Footer Section */
+
+#footer {
+	background: #404040;
+	height:100px;
+	width: 100%;
+	border-top:1px solid #aaa;
+}
+
+.footer-column {
+	width: 252px;
+	margin:0 24px 0 0;
+	float:left;
+}
+
+/* Misc Elements */
+
+.hr {
+	width:100%;
+	border-bottom:1px solid #cacaca;
+}
+
+#lang {
+	margin: 0 10px;
+}
+
+#input-search {
+	width: 160px;
+	line-height:16px;
+	background: #fafafa;
+	border: 1px solid #bfbfbf;
+}
+
+#shade {
+    background: #efefef url(../../images/shade.jpg) no-repeat center 0;
+    height: 50px;
+}
+
+/*		Tablet Layout: 768px.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+	#top-bar, #header, #image-slider, #main, #logos {
+		width: 712px;
+	}
+		#logo-wrapper {
+		width:690px;
+		margin:0 auto;
+	}
+	
+	.logo {
+		background: url("../../images/background-2.png");
+		float: left;
+		padding: 16px 45px;
+		margin: 8px;
+		border: 1px solid #fff;
+	}
+	
+	.column {
+		width: 332px;
+		margin:0 24px 0 0;
+		float:left;
+	}
+}
+
+
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+	
+	#top-bar, #header, #image-slider, #main, #logos {
+		width: 252px;
+	}
+	
+	#header {
+		height: 225px;
+	}
+	
+	#list-nav {
+		padding:10px 0 0 0;
+		clear:both;
+		border-top: 1px solid #ccc;
+	}
+	
+	#list-nav li {
+		padding: 48px 16px 11px  16px;
+	}
+	
+	#logo-wrapper {
+		width:252px;
+		margin:0 auto;
+	}
+	
+	.logo {
+		background: url("../../images/background-2.png");
+		float: left;
+		width: 102px;
+		height: auto;
+		padding: 6px;
+		margin: 6px;
+		border: none;
+	}
+	
+	.column {
+		width: 252px;
+		margin:0;
+		clear:both;
+	}
+	
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	#top-bar, #header, #image-slider, #main, #logos {
+		width: 436px;
+	}
+		#logo-wrapper {
+		width:436px;
+		margin:0 auto;
+	}
+	
+	.logo {
+		background: url("../../images/background-2.png");
+		float: left;
+		width: 112px;
+		height: auto;
+		padding: 6px 10px;
+		margin: 6px;
+		border: none;
+	}
+	
+	.column {
+		width: 436px;
+		margin:0;
+		clear:both;
+	}
+	
+}
