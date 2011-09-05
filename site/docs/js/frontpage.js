@@ -7,7 +7,9 @@ $(document).ready(function(){
   var slides = $('.slide');
   var numberOfSlides = slides.length;
   var timeout;
-
+  
+  // Slide down container
+  $('#image-slider').slideDown(500);
   // Remove scrollbar in JS
   $('#slidesContainer').css('overflow', 'hidden');
 
@@ -29,6 +31,7 @@ $(document).ready(function(){
 
     // Insert a copy of the first slide at the end 
     $('#slideInner').append($('.slide').first().clone(true));
+    $('.slide').last().children('canvas').attr('data-processing-sources', '');
     
     // Set #slideInner width equal to total width of all slides (plus one)
     $('#slideInner').css('width', slideWidth * (numberOfSlides + 1));
@@ -44,17 +47,25 @@ $(document).ready(function(){
     });
     
     var transition = function(direction) {
-      // Resolve boundary conditions
+      // Resolve boundary conditions and move canvases correctly
       if (direction == 'right' && currentPosition == numberOfSlides) {
         currentPosition = 0;
         $('#slideInner').css({
           'marginLeft' : slideWidth*(-currentPosition)
         });
+        $('.slide').first().append($('.slide').last().children('canvas'));
       } else if (direction == 'left' && currentPosition == 0) {
         currentPosition = numberOfSlides;
         $('#slideInner').css({
           'marginLeft' : slideWidth*(-currentPosition)
         });
+        $('.slide').last().append($('.slide').first().children('canvas'));
+      }
+      if (direction == 'right' && currentPosition == numberOfSlides - 1) {
+        $('.slide').last().append($('.slide').first().children('canvas'));
+      }
+      if (direction == 'left' && currentPosition == 1) {
+        $('.slide').first().append($('.slide').last().children('canvas'));
       }
       
       // Determine new position
@@ -64,6 +75,12 @@ $(document).ready(function(){
       $('#slideInner').animate({
         'marginLeft' : slideWidth*(-currentPosition)
       });
+      
+      // Disable invisible sketches.
+      //$('.processing-canvas').each(function() {
+      //  console.log(this);
+      //});
+      //$('#canvas'+currentPosition).processing.loop();
     }
     
     // Set sliding timeout.
