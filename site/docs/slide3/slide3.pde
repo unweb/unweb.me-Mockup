@@ -26,6 +26,7 @@ void setup() {
     points.add(new vPoint());
   }
   centr = new vPoint(width*0.65, height*0.5, zDim*0.5);
+  noLoop();
 }
 
 void draw() {
@@ -80,24 +81,6 @@ class vPoint {
     py = ty;
     pz = tz;
     fx = fy = fz = 0;
-    if (x > width - 20) {
-      fx -= 0.1;
-    }
-    if (x < width*0.4) {
-      fx += 0.1;
-    }
-    if (y > height - 20) {
-      fy -= 0.1;
-    }
-    if (y < 20) {
-      fy += 0.1;
-    }
-    if (z > zDim) {
-      fz -= 0.1;
-    }
-    if (z < 0) {
-      fz += 0.1;
-    }
   }
 }
 
@@ -128,7 +111,7 @@ void stepSprings() {
         float x = L2;
         float A1 = 0.1*R2;
         float A2 = 0.4*R2;
-        stroke(145, 185, 245, max(0, 255 * (x - A2)/(A1 - A2) ));
+        stroke(255, max(0, 255 * (x - A2)/(A1 - A2) ));
         strokeWeight(1);
         line(p1.x,p1.y,p2.x,p2.y);
       } 

@@ -21,7 +21,7 @@ $(document).ready(function(){
     'float' : 'left',
     'width' : $('.slide').width()
   });
-  
+    
   if ($('.slide').length>1) {
     
     // Insert left and right arrow controls in the DOM
@@ -31,7 +31,7 @@ $(document).ready(function(){
 
     // Insert a copy of the first slide at the end 
     $('#slideInner').append($('.slide').first().clone(true));
-    $('.slide').last().children('canvas').attr('data-processing-sources', '');
+    $('.slide').last().children('canvas').remove();
     
     // Set #slideInner width equal to total width of all slides (plus one)
     $('#slideInner').css('width', slideWidth * (numberOfSlides + 1));
@@ -48,6 +48,7 @@ $(document).ready(function(){
     });
     
     var transition = function(direction) {
+
       // Resolve boundary conditions and move canvases correctly.
       if (direction == 'right' && currentPosition == numberOfSlides) {
         currentPosition = 0;
@@ -77,11 +78,12 @@ $(document).ready(function(){
         'marginLeft' : slideWidth*(-currentPosition)
       });
       
-      // Disable invisible sketches. Needs proper implementation
-      //$('.processing-canvas').each(function() {
-      //  console.log(this);
-      //});
-      //$('#canvas'+currentPosition).processing.loop();
+      // Disable invisible sketches.
+      $('.processing-canvas').each(function() {
+        var inst = Processing.getInstanceById($(this).attr('id'));
+        inst.noLoop();
+      });
+      Processing.getInstanceById($($('.slide')[currentPosition]).children('canvas').attr('id')).loop();
     }
     
     // Set sliding timeout.

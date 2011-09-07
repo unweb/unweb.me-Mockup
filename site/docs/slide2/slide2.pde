@@ -6,6 +6,7 @@ void setup() {
   size(896, 320, P2D);
   background(0,0);
   frameRate(16);
+  noLoop();
 }
 
 void draw() {
