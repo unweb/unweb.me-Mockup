@@ -213,7 +213,7 @@ body {
 	
 }
 
-#list-nav li.active {
+#list-nav li.active a{
 	color:#fff;
 	text-shadow: 1px 1px 8px #fff;
 }
