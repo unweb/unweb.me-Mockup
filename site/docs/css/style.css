@@ -200,6 +200,10 @@ body {
 #list-nav a {
 	color: #777;
 	text-shadow: 0px 1px 1px #fff;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;    
 }
 
 #list-nav li:hover {
