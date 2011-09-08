@@ -207,18 +207,18 @@ body {
 	background:#eee;
 }
 
-#list-nav .active {
+#list-nav .selected {
 	background:#52517f url(../../images/background-2v.gif) repeat-x 0 0;
 	color: #fff;
 	
 }
 
-#list-nav li.active a{
+#list-nav li.selected a{
 	color:#fff;
 	text-shadow: 1px 1px 8px #fff;
 }
 
-#list-nav li.active:hover {
+#list-nav li.selected:hover {
 	background:#52517f url(../../images/background-2v.gif) repeat-x 0 0;
 }
 
@@ -487,11 +487,11 @@ body {
 	color:#fff;
 }
 
-#footer-nav .active {
+#footer-nav .selected {
 	color: #fff;
 }
 
-#footer-nav li.active {
+#footer-nav li.selected {
 	color:#fff;
 }
 
