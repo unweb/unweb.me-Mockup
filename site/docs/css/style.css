@@ -136,6 +136,16 @@ body {
 	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
 }
 
+h1 {
+        background: url("../../images/background-2v.gif") repeat-x scroll 0 0 #4D8ED4;
+        color: #FFFFFF;
+	padding: 28px 22px;
+	text-shadow: 1px 1px 9px #777777;
+        font-family: 'Conv_MavenPro-Regular',Helvetica,Arial,sans-serif;
+    	font-size: 22px;
+    	font-weight: normal;
+    	line-height: 26px;
+}
 /* (almost) All elements.. */
 /* Here our main column width is applied to all the elements. The
   ones that span the whole screen are either not defined here or
@@ -193,17 +203,18 @@ body {
 	display:block;
 	float:left;
 	list-style-type: none;
-	padding: 56px 14px;
+	padding: 56px 0px;
 	text-transform: lowercase;
 }
 
 #list-nav a {
 	color: #777;
 	text-shadow: 0px 1px 1px #fff;
-    font-family: Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    font-weight: normal;
-    text-decoration: none;    
+    	font-family: Helvetica,Arial,sans-serif;
+    	font-size: 14px;
+    	font-weight: normal;
+    	text-decoration: none;    
+	padding: 54px 16px;
 }
 
 #list-nav li:hover {
@@ -230,7 +241,8 @@ body {
 
 #search-bar {
 	border: 1px solid #ddd;
-	overflow: auto;
+	overflow: visible;
+        height: 28px;
 }
 
 #lang-select {
@@ -238,18 +250,48 @@ body {
 	float:left;
 }
 
-#input-search {
+#searchGadget {
 	line-height:16px;
 	border: 1px solid #dadada;
 	float: right;
 	background: transparent;
 	margin: 4px;
+	color: #282828;
+        width: 210px;
 }
 
+#searchGadget.inputLabelActive {
+        color: #777;
+}
+
+#LSResult {
+	background-color: #fff;
+	position:absolute;
+        z-index: 10000;
+        top: 28px;
+        width: 200px;
+        right: 0;
+        padding: 0 10px;
+}
+
+.LSRow {
+	list-style-type: none;
+}
+
+#livesearchLegend {
+	font-weight: bold;
+	color: #777;
+	font-size: 10px;
+}
 /* Image Slider */
 
 #image-slider {
 	background:#4d8ed4 url(../../images/background-2v.gif) repeat-x 0 0;
+        display: none;
+}
+
+body.section-state-of-the-art-information-systems #image-slider {
+	display:block;
 }
 
 #slidesContainer {
@@ -504,6 +546,10 @@ body {
 	color:#eee;
 	padding:4px 10px;
 }
+
+.searchSection, #search-bar label, #search-bar .searchButton {display:none;}
+
+.LSBox { float:right; }
 
 /*		Tablet Layout: 768px.
 		Gutters: 24px.
