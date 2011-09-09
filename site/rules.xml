@@ -1,0 +1,61 @@
+<rules xmlns="http://namespaces.plone.org/diazo"
+       xmlns:css="http://namespaces.plone.org/diazo/css">
+
+    <theme href="index.html" />
+
+
+    <!-- replace title !-->
+    <replace content="/html/head/title" theme="/html/head/title" />
+
+    <!-- copy meta base and script tags from head -->
+    <append  content="/html/head/base" theme="/html/head" />
+    <append  content="/html/head/meta" theme="/html/head" />
+    <append  content='/html/head/script' theme='/html/head' />     
+    <!--append  content='/html/head/style' theme='/html/head' /-->
+    <!--append  content="/html/head/link" theme="/html/head" /-->
+
+    <!-- copy body attrs -->
+    <prepend theme="/html/body" content="/html/body/@class" />
+    <prepend theme="/html/body" content="/html/body/@id" />	
+    <prepend theme="/html/body" content="/html/body/@dir" />
+
+    <!--copy content='//*[@id="portal-logo"]' theme='//*[@id="logo"]' /-->
+    <!--copy content='//*[@id="portal-languageselector"]' theme='//*[@id="languageselector"]' /-->
+    
+    <!-- navigation -->
+    <copy content='//*[@id="portal-globalnav"]/*' theme='//*[@id="list-nav"]' />
+    
+    <!-- main content for pages besides home -->
+    <prepend content='//*[@id="portal-column-content"]/*' theme='//*[@id="main"]' if-content="not(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
+
+    <!-- footer -->
+    <append content='//*[@id="footer-portlets"]/*' theme='//*[@id="footer"]' />
+
+    <!-- searchbox -->
+    <copy content='//*[@id="portal-searchbox"]/form' theme='//*[@id="search-bar"]' />
+
+
+    <!-- drop slideshow script for pages other than home -->
+    <drop theme='/html/body//script' if-content="not(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
+
+    <!-- drop page title and description in home page -->
+    <drop content='//*[@id="parent-fieldname-title"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
+    <drop content='//*[@id="parent-fieldname-description"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
+
+
+    <!-- copy home page content -->
+    <replace content='//*[@id="content-core"]' theme='//*[@id="col-1"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])"/>
+
+
+    <!-- fix canvas data processing sources that are ignored normally by diazo -->
+    <replace css:theme="#canvas0">
+	<canvas id="canvas0" class="processing-canvas" data-processing-sources="++theme++unweb.me/docs/slide1/slide1.pde"></canvas>
+    </replace>
+    <replace css:theme="#canvas1">
+	<canvas id="canvas1" class="processing-canvas" data-processing-sources="++theme++unweb.me/docs/slide2/slide2.pde"></canvas>
+    </replace>
+    <replace css:theme="#canvas2">
+	<canvas id="canvas2" class="processing-canvas" data-processing-sources="++theme++unweb.me/docs/slide3/slide3.pde"></canvas>
+    </replace>
+
+</rules>
