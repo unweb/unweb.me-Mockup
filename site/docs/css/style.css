@@ -568,6 +568,7 @@ body.section-state-of-the-art-information-systems #image-slider {
 	clear:both;
 	color:#eee;
 	padding:4px 10px;
+        text-align: center;
 }
 
 .searchSection, #search-bar label, #search-bar .searchButton {display:none;}
