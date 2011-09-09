@@ -84,6 +84,10 @@ $(document).ready(function(){
         inst.noLoop();
       });
       Processing.getInstanceById($($('.slide')[currentPosition]).children('canvas').attr('id')).loop();
+      clearInterval(autoSlideTimeout);
+      autoSlideTimeout = setInterval(function() {
+        transition('right');
+      }, 6000);
     }
     
     // Set sliding timeout.
