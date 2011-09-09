@@ -85,20 +85,41 @@
                 </div>
 				<div id="news" class="column double last gradient">
 					<div id="twitter-col" class="news-column">
-						<h3 class="column-title">Twitter</h3>
-						<ul id="twitter">
-							<li>Very happy with our #Plumi workshop in GFOSS. Many people came and several of them followed the installation process on their laptops - 
-                            112 days ago · reply · retweet · favorite</li>
-
-                            <li>We'll be presenting the "Build your own Youtube using FOSS" workshop at the annual FOSS conference in Athens - 20th May http://bit.ly/ka7S0y - 113 days ago · reply · retweet · favorite</li>
-
-                            <li>#Plumi 4.2rc2 released! http://bit.ly/lUtzf0 - Installation testing more than welcome. The final 4.2 release should follow shortly - 113 days ago · reply · retweet · favorite</li>
-
-                            <li>unweb.me was in Bogor, Indonesia, assisting the asteki.com TV association in setting up #Plumi to distribute their videos http://asteki.org - 113 days ago · reply · retweet · favorite</li>
-
-                            <li>#Plumi video sharing platform version 4.1.2 released http://plone.org/product... #plone - 166 days ago · reply · retweet · favorite</li>
                         
-						</ul>
+						<h3 class="column-title">Twitter</h3>
+                        <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+                        <script>
+                        new TWTR.Widget({
+                          version: 2,
+                          type: 'faves',
+                          rpp: 10,
+                          interval: 30000,
+                          title: '',
+                          subject: '',
+                          width: 'auto',
+                          height: 520,
+                          theme: {
+                            shell: {
+                              background: 'transparent',
+                              color: '#ffffff'
+                            },
+                            tweets: {
+                              background: 'transparent',
+                              color: '#444444',
+                              links: '#4d8ed4'
+                            }
+                          },
+                          features: {
+                            scrollbar: true,
+                            loop: false,
+                            live: true,
+                            hashtags: true,
+                            timestamp: true,
+                            avatars: false,
+                            behavior: 'all'
+                          }
+                        }).render().setUser('unwebme').start();
+                        </script>                        
 					</div>
 					<div id="blog-col" class="news-column last">
 						<h3 class="column-title">Blog</h3>
