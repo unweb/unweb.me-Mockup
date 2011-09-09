@@ -45,7 +45,7 @@
 
     <!-- copy home page content -->
     <replace content='//*[@id="content-core"]' theme='//*[@id="col-1"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])"/>
-
+    <copy content='//*[@id="portlets-below"]' theme='//*[@id="blog-col"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])"/> 
 
     <!-- fix canvas data processing sources that are ignored normally by diazo -->
     <replace css:theme="#canvas0">

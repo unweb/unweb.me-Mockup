@@ -136,6 +136,11 @@ body {
 	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
 }
 
+a {
+	color: #4d8ed4;
+ 	text-decoration: none;
+}
+
 h1 {
         background: url("../../images/background-2v.gif") repeat-x scroll 0 0 #4D8ED4;
         color: #FFFFFF;
@@ -272,6 +277,10 @@ h1 {
         width: 200px;
         right: 0;
         padding: 0 10px;
+	border-left: 1px solid #4d8ed4;
+	border-bottom: 1px solid #4d8ed4;
+	border-top: 0px solid transparent;
+	border-right: 0px solid transparent;
 }
 
 .LSRow {
@@ -491,8 +500,41 @@ body.section-state-of-the-art-information-systems #image-slider {
 }
 
 .portletHeader {
-	padding: 18px 0 12px 0;
+    	border-bottom: 1px solid #CFCFCF;
+    	margin: 16px 0;
+        padding: 16px 0;
+        font-family: 'Conv_MavenPro-Regular',Helvetica,Arial,sans-serif;
+    	font-size: 22px;
+    	font-weight: normal;
+   	line-height: 26px;
 }
+
+.portletItem {
+    line-height: 1.2em;
+    margin-bottom: 15px;
+    margin-top: 20px !important;
+    margin-left: 15px;
+    font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif !important;
+    font-size: 12px !important;
+}
+
+.portletItem a {
+	color: #282828;
+}
+
+.portletItem a .portletItemDetails {
+	color: #4d8ed4;
+	clear: left;
+	display: block;
+	font-size: 9px;
+    	font-style: normal;
+	font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif !important;
+}
+
+.portletItem a:hover .portletItemDetails {
+        text-decoration: underline;
+}
+
 
 /* Prjects Section */
 
