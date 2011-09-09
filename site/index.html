@@ -105,14 +105,16 @@
 			</div>
 			<div id="logos" class="section">
 				<h3 class="section-title bigger gradient-vert">Our Clients</h3>
-				<img class="logo" src="images/logosbw/image_thumb.png" />
-				<img class="logo" src="images/logosbw/image_thumb-1.png" />
-				<img class="logo" src="images/logosbw/image_thumb-2.png" />
-				<img class="logo" src="images/logosbw/image_thumb-3.png" />
-				<img class="logo" src="images/logosbw/image_thumb-4.png" />
-				<img class="logo" src="images/logosbw/image_thumb-6.png" />
-				<img class="logo" src="images/logosbw/image_thumb-7.png" />
-				<img class="logo" src="images/logosbw/image_thumb-8.png" />
+                <ul>
+                    <li><a href="#" class="logo"><span><img src="images/logos-bwc/client-1.png" /></span></a></li>
+				    <li><a href="#" class="logo"><span><img src="images/logos-bwc/client-2.png" /></span></a></li>
+				    <li><a href="#" class="logo"><span><img src="images/logos-bwc/client-3.png" /></span></a></li>
+				    <li><a href="#" class="logo"><span><img src="images/logos-bwc/client-4.png" /></span></a></li>
+				    <li><a href="#" class="logo"><span><img src="images/logos-bwc/client-5.png" /></span></a></li>
+				    <li><a href="#" class="logo"><span><img src="images/logos-bwc/client-6.png" /></span></a></li>
+				    <li><a href="#" class="logo"><span><img src="images/logos-bwc/client-7.png" /></span></a></li>
+				    <li><a href="#" class="logo"><span><img src="images/logos-bwc/client-8.png" /></span></a></li>
+                </ul>
 			</div>
 		</div>
 		<div id="footer-wrapper">
@@ -139,5 +141,22 @@
 		
 		<script src="docs/js/libs/processing-1.2.3.min.js"></script>  
 		<script type="text/javascript" src="docs/js/frontpage.js"></script>
+        <script>
+	            $("#logos ul li").hover(function() { //On hover...
+
+		            var thumbOver = $(this).find("img").attr("src"); //Get image url and assign it to 'thumbOver'
+
+		            //Set a background image(thumbOver) on the <a> tag - Set position to bottom
+		            $(this).find("a.logo").css({'background' : 'url(' + thumbOver + ') no-repeat center bottom'});
+
+		            //Animate the image to 0 opacity (fade it out)
+		            $(this).find("span").stop().fadeTo('normal', 0 , function() {
+			            $(this).hide() //Hide the image after fade
+		            });
+	            } , function() { //on hover out...
+		            //Fade the image to full opacity 
+		            $(this).find("span").stop().fadeTo('normal', 1).show();
+	            });
+        </script>
 	</body>
 </html>

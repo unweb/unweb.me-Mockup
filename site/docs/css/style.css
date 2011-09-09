@@ -441,10 +441,33 @@ body.section-state-of-the-art-information-systems #image-slider {
 	padding-bottom: 24px;
 }
 
-.logo {
+#logos li {
 	float: left;
 	padding: 24px 55px;
 	margin: 8px;
+    display:inline;
+}
+
+#logos li a.logo {
+    width:96px;
+    height:96px;
+}
+
+#logos span {
+    width:96px;
+    height:96px;
+    overflow:hidden;
+    display:block;
+}
+
+#logos li a.logo:hover {
+    background: #ddd; /*--Hover effect for browser with js turned off--*/
+}
+
+#logos li a {
+    text-decoration: none; 
+    color: #777;
+    display: block;
 }
 
 /* Blog Section */
