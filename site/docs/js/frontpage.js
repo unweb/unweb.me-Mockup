@@ -7,6 +7,10 @@ $(document).ready(function(){
   var slides = $('.slide');
   var numberOfSlides = slides.length;
   var timeout;
+  // Set sliding timeout.
+  var autoSlideTimeout = setTimeout(function() {
+    transition('right');
+  }, 6000);
   
   // Slide down container
   $('#image-slider').slideDown(500);
@@ -44,7 +48,7 @@ $(document).ready(function(){
       if ($(this).attr('id') == 'rightControl') transition('right'); else transition('left');
       
       // Clear the autoslide timeout.
-      clearInterval(autoSlideTimeout);      
+      clearTimeout(autoSlideTimeout);      
     });
     
     var transition = function(direction) {
@@ -84,16 +88,11 @@ $(document).ready(function(){
         inst.noLoop();
       });
       Processing.getInstanceById($($('.slide')[currentPosition]).children('canvas').attr('id')).loop();
-      clearInterval(autoSlideTimeout);
-      autoSlideTimeout = setInterval(function() {
+      clearTimeout(autoSlideTimeout);
+      autoSlideTimeout = setTimeout(function() {
         transition('right');
       }, 6000);
     }
-    
-    // Set sliding timeout.
-    var autoSlideTimeout = setInterval(function() {
-      transition('right');
-    }, 6000);
     
     // Bind to resize event
     $(window).resize(function() {
