@@ -41,10 +41,10 @@ $(document).ready(function(){
     .bind('click', function(){
       var id = $(this).attr('id');
       
-      // Clear the autoslide timeout.
-      clearInterval(autoSlideTimeout);
-      
       if ($(this).attr('id') == 'rightControl') transition('right'); else transition('left');
+      
+      // Clear the autoslide timeout.
+      clearInterval(autoSlideTimeout);      
     });
     
     var transition = function(direction) {
@@ -105,7 +105,7 @@ $(document).ready(function(){
     });
     
     // Clicking on site categories triggers a rollup of the slider window.
-    $('.category-link').click(function(e) {
+    $('#nav a').click(function(e) {
       var $this = $(this);
       e.preventDefault();
       $('#image-slider').slideUp(300, function() {
