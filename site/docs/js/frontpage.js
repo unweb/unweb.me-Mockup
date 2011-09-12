@@ -78,7 +78,7 @@ $(document).ready(function(){
       currentPosition = direction == 'right' ? currentPosition + 1 : currentPosition - 1;
       
       // Move slideInner using margin-left
-      $('#slideInner').animate({
+      $('#slideInner').filter(':not(:animated)').animate({
         'marginLeft' : slideWidth*(-currentPosition)
       });
       
