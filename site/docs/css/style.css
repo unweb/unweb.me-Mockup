@@ -48,14 +48,14 @@ a img {border: 0;}
 	line-height: 48px;
 }
 
-.bigger, h3 {
+.bigger, h3, #portlets-below dt.portletHeader {
 	font-family: 'Conv_MavenPro-Regular', Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	font-size: 22px;
 	line-height: 26px;
 }
 
-.big, h4 {
+.big, h4, h2.tileHeadline {
 	font-family: 'Conv_MavenPro-Regular', Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	font-size: 16px;
@@ -273,7 +273,8 @@ h1 {
 	background-color: #fff;
 	position:absolute;
         z-index: 10000;
-        top: 28px;
+        top: 29px;
+	display: none;
         width: 200px;
         right: 0;
         padding: 0 10px;
@@ -285,6 +286,16 @@ h1 {
 
 .LSRow {
 	list-style-type: none;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.LSRow a {
+	font-weight: bold;
+}
+
+.LSDescr {
+	padding-left: 10px;
 }
 
 #livesearchLegend {
@@ -365,7 +376,7 @@ body.section-state-of-the-art-information-systems #image-slider {
 	text-shadow: 1px 1px 9px #777;
 }
 
-.column {
+.column, #content-core .visualIEFloatFix {
 	width: 228px;
 	padding: 0 18px 32px 18px;
 	float:left;
@@ -545,12 +556,17 @@ body.section-state-of-the-art-information-systems #image-slider {
 	padding-bottom:20px;
 }
 
-.project-column {
+.project-column, body.section-projects .tileItem {
 	width:298px;
 	margin: 0 0 16px 0;
 	padding: 0;
 	text-align: center;
 }
+
+body.section-projects .tileItem .tileBody, body.section-projects .tileItem .tileFooter {
+display: none
+}
+
 
 #open-source ul {
 	padding:24px;
@@ -618,6 +634,12 @@ body.section-state-of-the-art-information-systems #image-slider {
 .LSBox { float:right; }
 
 .twtr-widget { margin-top: -22px; }
+
+
+#viewlet-below-content {
+    clear:both;
+}
+
 /*		Tablet Layout: 768px.
 		Gutters: 24px.
 		Outer margins: 28px.

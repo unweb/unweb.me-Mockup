@@ -26,7 +26,13 @@
     <copy content='//*[@id="portal-globalnav"]/*' theme='//*[@id="list-nav"]' />
     
     <!-- main content for pages besides home -->
-    <prepend content='//*[@id="portal-column-content"]/*' theme='//*[@id="main"]' if-content="not(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
+    <replace content='//*[@id="portal-column-content"]/*' theme='//*[@id="main"]' if-content="not(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
+
+    <!-- remove breadcrumbs, leave on blog only -->
+    <drop content='//*[@id="portal-breadcrumbs"]' />
+
+    <!-- leave client logos on index page-->
+    <drop theme='//*[@id="logos"]' if-content="not(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
 
     <!-- footer -->
     <append content='//*[@id="footer-portlets"]/*' theme='//*[@id="footer"]' />
@@ -57,5 +63,13 @@
     <replace css:theme="#canvas2">
 	<canvas id="canvas2" class="processing-canvas" data-processing-sources="++theme++unweb.me/docs/slide3/slide3.pde"></canvas>
     </replace>
+
+    <!-- about us -->
+    <replace content='//*[@id="portlets-below"]' theme='//*[@id="people"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-about-us ')])"/>
+
+
+   <!-- projects -->
+    <drop content='//*[@id="parent-fieldname-title"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-projects ')])" />
+    <replace content='//*[@id="portlets-below"]' theme='//*[@id="open-source"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-projects ')])"/>
 
 </rules>
