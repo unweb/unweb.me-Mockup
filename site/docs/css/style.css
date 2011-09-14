@@ -92,15 +92,15 @@ body {
 }
 
 .special {
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 12px;
+	font-family: 'Conv_MavenPro-Regular', Helvetica, Arial, sans-serif;
+	font-size: 16px;
 	font-weight: normal;
 	text-decoration:none;
 }
 
 .small-special {
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 14px;
+	font-size: 10px;
 	font-weight: normal;
 	text-decoration:none;
 }
@@ -215,10 +215,7 @@ h1 {
 #list-nav a {
 	color: #777;
 	text-shadow: 0px 1px 1px #fff;
-    	font-family: Helvetica,Arial,sans-serif;
-    	font-size: 14px;
-    	font-weight: normal;
-    	text-decoration: none;    
+    text-decoration: none;    
 	padding: 54px 16px;
 }
 
