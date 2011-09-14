@@ -89,12 +89,12 @@ function redraw() {
 
   drawEllipse(x + 40, y + 29, 160 - breathAmt, 3); // Shadow
 
-  context.drawImage(images["leftArm"], x + 48, y - 42 - breathAmt);
+  context.drawImage(images["leftArm"], x + 40, y - 42 - breathAmt);
   context.drawImage(images["legs"], x, y);
   context.drawImage(images["torso"], x - 28, y - 77);
   context.drawImage(images["head"], x + 10, y - 125 - breathAmt);
   context.drawImage(images["hair"], x - 37, y - 138 - breathAmt);
-  context.drawImage(images["rightArm"], x - 10, y - 42 - breathAmt);
+  context.drawImage(images["rightArm"], x - 15, y - 42 - breathAmt);
 	
   drawEllipse(x + 63, y - 85 - breathAmt, 8, curEyeHeight); // Left Eye
   drawEllipse(x + 87, y - 78 - breathAmt, 7, curEyeHeight -2); // Right Eye
