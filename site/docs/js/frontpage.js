@@ -127,11 +127,11 @@ $(document).ready(function(){
     // Add 'hover' class to container when mouseover
     $('#slidesContainer').mouseenter(function() {
       container.addClass('hover');
-      $('.control').animate({opacity : 0.4}, 300);
+      $('.control').fadeTo(300, 0.3);
     });
     $('#slidesContainer').mouseleave(function() {
       container.removeClass('hover');
-      $('.control').animate({opacity : 1.0}, 300);
+      $('.control').fadeTo(300, 1.0);
     });
   } 
 });
