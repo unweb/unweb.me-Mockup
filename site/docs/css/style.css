@@ -606,6 +606,11 @@ body.section-projects #content-core {
 
 /* Blog Section */
 
+#blog {
+	font-size: 14px;
+	line-height: 1.46em;
+}
+
 #blog a {
 	color:#4080d4;
 	text-decoration: none;
