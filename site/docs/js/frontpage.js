@@ -125,11 +125,13 @@ $(document).ready(function(){
     });
     
     // Add 'hover' class to container when mouseover
-    container.mouseenter(function() {
+    $('#slidesContainer').mouseenter(function() {
       container.addClass('hover');
+      $('.control').animate({opacity : 0.4}, 300);
     });
-    container.mouseleave(function() {
+    $('#slidesContainer').mouseleave(function() {
       container.removeClass('hover');
+      $('.control').animate({opacity : 1.0}, 300);
     });
   } 
 });
