@@ -265,7 +265,7 @@ h1.documentFirstHeading {
 #search-bar {
 	border: 1px solid #ddd;
 	overflow: visible;
-        height: 28px;
+    height: 28px;
 }
 
 #lang-select {
@@ -357,9 +357,6 @@ body.section-state-of-the-art-information-systems #image-slider {
 .slide ul li {
 	margin-top:20px;
 }
-
-
-
 
 .slide-text {
   position: relative;
@@ -618,8 +615,20 @@ body.section-projects #content-core {
 	text-decoration: underline;
 }
 
+#blog .DocumentDescription {
+	padding: 0 0 1em 0;
+	margin: 1em 0;
+	border-bottom: 1px solid #ccc;
+}
+
 #blog-sidebar, #portal-column-two {
 	border-bottom: 1px solid #ccc;
+}
+
+#blog-nav {
+	border: 1px solid #ddd;
+	overflow: visible;
+	padding: 8px 16px;
 }
 
 .sidebar-element {
@@ -666,6 +675,10 @@ body.section-projects #content-core {
 
 .portletItem a:hover .portletItemDetails {
         text-decoration: underline;
+}
+
+.dotted-bg {
+	background: url("../../images/background-1.gif") repeat 0 0;
 }
 
 
