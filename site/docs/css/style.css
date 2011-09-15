@@ -669,6 +669,20 @@ body.section-projects #content-core {
 	text-align: center;
 }
 
+.default-project {
+	width: 180px;
+	height: 180px;
+	margin: 0 auto;
+	background: url('../../images/projects/sphere.png') center no-repeat;
+}
+
+.plone-project {
+	width: 180px;
+	height: 180px;
+	margin: 0 auto;
+	background: url('../../images/projects/plone.png') center no-repeat;
+}
+
 body.section-projects .tileItem .tileBody, body.section-projects .tileItem .tileFooter {
 	display: none
 }
