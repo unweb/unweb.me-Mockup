@@ -583,6 +583,30 @@ body.section-projects #content-core {
     display: block;
 }
 
+/* About section */
+
+.we {
+	height: 24px;
+	padding-left: 54px;
+}
+
+.are {
+	background: url('../../images/icons/ppl.png') left center no-repeat;
+}
+
+.love {
+	background: url('../../images/icons/hart.png') left center no-repeat;
+}
+
+.provide {
+	background: url('../../images/icons/diamant.png') left center no-repeat;
+}
+
+.collaborate {
+	padding-left: 84px;
+	background: url('../../images/icons/canoe.png') left center no-repeat;
+}
+
 /* Blog Section */
 
 #blog a {
