@@ -1,4 +1,5 @@
 <rules xmlns="http://namespaces.plone.org/diazo"
+       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
        xmlns:css="http://namespaces.plone.org/diazo/css">
 
     <theme href="index.html" />
@@ -11,8 +12,11 @@
     <append  content="/html/head/base" theme="/html/head" />
     <append  content="/html/head/meta" theme="/html/head" />
     <append  content='/html/head/script' theme='/html/head' />     
-    <!--append  content='/html/head/style' theme='/html/head' /-->
-    <!--append  content="/html/head/link" theme="/html/head" /-->
+    <append  content='/html/head/style' theme='/html/head' />
+    <append  content="/html/head/link" theme="/html/head" />
+    <drop content="/html/head/link[contains(@href, 'cachekey')]" />
+    <drop content="/html/head/style[contains(text(),'cachekey')]" />
+    <drop content="/html/head/link[contains(@rel, 'kinetic-stylesheet')]" />
 
     <!-- copy body attrs -->
     <prepend theme="/html/body" content="/html/body/@class" />
@@ -24,15 +28,24 @@
     
     <!-- navigation -->
     <copy content='//*[@id="portal-globalnav"]/*' theme='//*[@id="list-nav"]' />
+    <copy content='//*[@id="portal-globalnav"]/*' theme='//*[@id="footer-nav"]' />
     
     <!-- main content for pages besides home -->
     <replace content='//*[@id="portal-column-content"]/*' theme='//*[@id="main"]' if-content="not(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
 
-    <!-- remove breadcrumbs, leave on blog only -->
+    <!-- slideshow -->
+    <copy css:content='.AbovePortletManager1 .portletContent' theme='//div[@class="slide"][1]/div[@class="slide-text wide"]' />
+    <copy css:content='.AbovePortletManager2 .portletContent' theme='//div[@class="slide"][2]/div[@class="slide-text wide"]' />
+    <copy css:content='.AbovePortletManager3 .portletContent' theme='//div[@class="slide"][3]/div[@class="slide-text wide"]' />
+
+    <!-- remove breadcrumbs -->
     <drop content='//*[@id="portal-breadcrumbs"]' />
 
+    <!-- remove image slider if not in home -->
+    <drop css:theme="#image-slider" if-content="not(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
+
     <!-- leave client logos on index page-->
-    <drop theme='//*[@id="logos"]' if-content="not(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
+    <drop theme='//*[@id="logos"]' if-content="not(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')]|/html/body[contains(concat(' ',normalize-space(@class),' '),' section-projects ')])" />
 
     <!-- footer -->
     <append content='//*[@id="footer-portlets"]/*' theme='//*[@id="footer"]' />
@@ -68,8 +81,34 @@
     <replace content='//*[@id="portlets-below"]' theme='//*[@id="people"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-about-us ')])"/>
 
 
-   <!-- projects -->
-    <drop content='//*[@id="parent-fieldname-title"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-projects ')])" />
+   <!-- projects .portlet-collection-open-source -->
     <replace content='//*[@id="portlets-below"]' theme='//*[@id="open-source"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-projects ')])"/>
 
+
+    <!-- drop first listing/pagination on blog -->
+    <drop content="//*[@class='listingBar'][1]" if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-blog ')])" />
+    <append content='//*[@id="portal-column-two"]' theme='//*[@id="content-wrapper"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-blog ')])" />
+
+    <replace css:content=".portlet-collection-open-source">
+	<h3 class="section-title bigger gradient-vert">Open Source Products</h3>
+	<div class="projects-wrapper">
+	<xsl:for-each css:select="a">
+    	<a href="">
+                <xsl:attribute name="href">
+			<xsl:value-of select="@href" />
+		</xsl:attribute>
+		<div class="column project-column">
+		<img src="++theme++unweb.me/images/sphere.png">
+                <xsl:attribute name="src">
+                        <xsl:value-of select="@href" />
+			<xsl:text>/image_thumb</xsl:text>
+                </xsl:attribute>
+
+		</img>
+		<h4 class="project-title"><xsl:copy-of select="text()" /></h4>
+		</div>
+	</a>
+	</xsl:for-each>
+	</div>
+    </replace>
 </rules>

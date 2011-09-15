@@ -37,13 +37,13 @@ a img {border: 0;}
 	letter-spacing: -2px;
 }
 
-.huge, h1 {
+.huge, h1.documentFirstHeading {
 	font-size: 68px;
 	line-height: 72px;
 	letter-spacing: -1px;
 }
 
-.large, h2 {
+.large, h2.documentFirstHeading {
 	font-size: 42px;
 	line-height: 48px;
 }
@@ -98,7 +98,7 @@ body {
 	text-decoration:none;
 }
 
-.small-special {
+.small-special, #footer-nav li a {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 10px;
 	font-weight: normal;
@@ -141,7 +141,7 @@ a {
  	text-decoration: none;
 }
 
-h1 {
+h1.documentFirstHeading {
         background: url("../../images/background-2v.gif") repeat-x scroll 0 0 #4D8ED4;
         color: #FFFFFF;
 	padding: 28px 22px;
@@ -151,6 +151,27 @@ h1 {
     	font-weight: normal;
     	line-height: 26px;
 }
+
+.blog-item h1.documentFirstHeading {
+    background:none;
+    color: #444444;
+    text-shadow: none;
+    border-bottom: 1px solid #CFCFCF;
+    margin: 16px 0;
+    padding: 16px 0;
+    font-family: Georgia;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 32px;
+    text-decoration: none;
+}
+
+.blog-item h1.documentFirstHeading a{
+    color: #444444;
+}
+
+
 /* (almost) All elements.. */
 /* Here our main column width is applied to all the elements. The
   ones that span the whole screen are either not defined here or
@@ -328,6 +349,18 @@ body.section-state-of-the-art-information-systems #image-slider {
   position:relative;
 }
 
+.slide ul {
+	padding-left:20px;
+	list-style: square;
+}
+
+.slide ul li {
+	margin-top:20px;
+}
+
+
+
+
 .slide-text {
   position: relative;
   display: block;
@@ -374,11 +407,61 @@ body.section-state-of-the-art-information-systems #image-slider {
 	text-shadow: 1px 1px 9px #777;
 }
 
-.column, #content-core .visualIEFloatFix {
+/*
+#content p, #viewlet-below-content {
+	padding: 0 18px 32px;
+}
+*/
+
+#content {
+	padding: 0 18px;
+
+}
+
+#content h1.documentFirstHeading {
+	margin-left: -18px;
+	margin-right: -18px;
+}
+
+.column, #content-core .tileItem {
 	width: 228px;
-	padding: 0 18px 32px 18px;
+	padding: 0px 18px 32px;
 	float:left;
 	color: #444;
+}
+
+h3.column-title a{
+    color:#444444;
+}
+
+#content-core {
+    width: 504px;
+}
+
+#portal-column-two {
+     position: absolute;
+    right: 0;
+    top: 84px;
+    width: 320px;
+    background:transparent url(../../images/background-3.gif) repeat-y 0 0;
+    padding: 0 18px 32px;
+}
+body.section-projects #content-core {
+    width: auto;
+}
+
+#blog-listing {
+    padding: 0 18px 32px;
+}
+
+#content-core .tileItem {
+        height: 228px;
+	padding: 20px 18px 2px;
+}
+
+.listingBar {
+    float: left;
+    clear: left;
 }
 
 .gradient {
@@ -393,10 +476,22 @@ body.section-state-of-the-art-information-systems #image-slider {
 	background: #52517f url(../../images/background-5.gif) repeat-x 0 0;
 }
 
-.column-title {
+.column-title, .slide .item-title {
 	padding: 16px 0;
 	margin: 16px 0;
 	border-bottom: 1px solid #cfcfcf;
+}
+
+.slide a {
+	color: #fff;
+}
+
+.slide {
+    font-family: 'Conv_MavenPro-Regular',Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 22px;
+    text-decoration: none;
 }
 
 .column ul {
@@ -435,8 +530,8 @@ body.section-state-of-the-art-information-systems #image-slider {
 
 .news-column {
 	float:left;
-	width:226px;
-	padding: 0 12px 0 0;
+	width:236px;
+	padding: 0 15px 0 0;
 }
 
 .news-column li {
@@ -499,7 +594,7 @@ body.section-state-of-the-art-information-systems #image-slider {
 	text-decoration: underline;
 }
 
-#blog-sidebar {
+#blog-sidebar, #portal-column-two {
 	border-bottom: 1px solid #ccc;
 }
 
@@ -519,12 +614,17 @@ body.section-state-of-the-art-information-systems #image-slider {
 }
 
 .portletItem {
-    line-height: 1.2em;
-    margin-bottom: 15px;
-    margin-top: 20px !important;
-    margin-left: 15px;
-    font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif !important;
-    font-size: 12px !important;
+   	line-height: 1.2em;
+   	margin-bottom: 15px;
+   	margin-top: 20px !important;
+   	margin-left: 0px;
+   	font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif !important;
+   	font-size: 12px !important;
+}
+
+.portletCollection .portletItem {
+	margin-left: 15px;
+	margin-right: 15px;
 }
 
 .portletItem a {
@@ -547,6 +647,14 @@ body.section-state-of-the-art-information-systems #image-slider {
 
 /* Prjects Section */
 
+#category {
+    	color: #666666;
+    	font-size: 90%;
+ 	margin-bottom: 1em;
+	text-align: right;
+	padding-right: 30px;
+}
+
 .projects-wrapper {
 	background: url("../../images/background-1.gif") repeat 0 0;
 	overflow: auto;
@@ -562,7 +670,7 @@ body.section-state-of-the-art-information-systems #image-slider {
 }
 
 body.section-projects .tileItem .tileBody, body.section-projects .tileItem .tileFooter {
-display: none
+	display: none
 }
 
 
@@ -575,6 +683,36 @@ display: none
 	padding:5px;
 }
 
+#content-core ul {
+    list-style-type: disc;
+    margin-left: 2em;
+}
+
+#content #parent-fieldname-description {
+    color: #666666;
+    font: bold 1.25em "Helvetica Neue",Arial,FreeSans,sans-serif;
+    margin-left: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+body.section-blog #parent-fieldname-description {
+    width: 504px;
+}
+
+#content-core p, #content-core table, #content-core dl, dl.portlet p, dl.portlet {
+    margin-bottom: 1em;
+}
+
+#content img.tileImage, #content div.newsImageContainer {
+    margin: 0 1em 0.5em;
+}
+
+#content-core li, dl.portlet li {
+    display: list-item;
+    line-height: 1.5em;
+
+}
 /* Footer Section */
 
 #footer-wrapper {
@@ -624,7 +762,6 @@ display: none
 	clear:both;
 	color:#eee;
 	padding:4px 10px;
-        text-align: center;
 }
 
 .searchSection, #search-bar label, #search-bar .searchButton {display:none;}
@@ -633,9 +770,17 @@ display: none
 
 .twtr-widget { margin-top: -22px; }
 
+.twtr-ft { display: none; }
+
+.twtr-bd {
+    padding: 0 0 0 12px !important;
+}
 
 #viewlet-below-content {
     clear:both;
+}
+#category {
+    width: 504px;
 }
 
 /*		Tablet Layout: 768px.
