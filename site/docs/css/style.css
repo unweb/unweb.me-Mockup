@@ -81,7 +81,7 @@ a img {border: 0;}
 }
 
 body {
-	font: 12px/18px Helvetica, Arial, serif;
+	font: 13px/18px Helvetica, Arial, serif;
 }
 
 .small, small {
@@ -237,7 +237,7 @@ h1.documentFirstHeading {
 	color: #777;
 	text-shadow: 0px 1px 1px #fff;
     text-decoration: none;    
-	padding: 54px 16px;
+	padding: 0 16px;
 }
 
 #list-nav li:hover {
@@ -607,7 +607,6 @@ body.section-projects #content-core {
 /* Blog Section */
 
 #blog {
-	font-size: 14px;
 	line-height: 1.46em;
 }
 
@@ -786,21 +785,21 @@ body.section-blog #parent-fieldname-description {
 
 #footer-logo {
 	float: left;
-	padding:40px 10px;
+	padding:30px 10px;
 }
 
-/* Navigation */
+/* Footer Navigation */
 
 #footer-nav {
 	float:right;
-	padding: 52px 0;
+	padding: 60px 0;
 }
 
 #footer-nav li {
 	display:block;
 	float:left;
 	list-style-type: none;
-	padding: 14px;
+	padding: 0 14px;
 	margin: 0;
 	text-transform: lowercase;
 }
@@ -856,21 +855,74 @@ px      68    160    252    344    436    528    620    712    */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
-	#slidesContainer, .slide, #news, .section, .hr {
-		width: 712px;
+	body {
+		font: 12px/18px Helvetica, Arial, serif;
+	}
+
+	.big {
+		font-size: 16px;
+		line-height: 1.36em;
 	}
 	
+	.special {
+		font-size: 14px;
+	}
+
+	#header, #search-bar, #image-slider, .section, #footer, .hr, #content-wrapper {
+		width: 768px;
+	}
+	#header-logo {
+		float:left;
+		padding:14px 10px 10px 10px;
+	}
+	
+	#list-nav a {  
+		padding: 0 12px;
+	}
+	
+	.bigger, h3, #portlets-below dt.portletHeader {
+		font-size: 20px;
+		line-height: 24px;
+	}
+
 	.column {
-		width: 332px;
-		margin:0 24px 0 0;
+		width: 212px;
 	}
 	
-	.last {
-		margin: 0px;
+	.wide {
+		width: 260px;
 	}
 	
-	.logo {
-		padding: 10px 45px;
+	.double {
+		width: 432px;
+	}
+	
+	.triple {
+		width: 748px;
+	}
+	
+	.half-width {
+		width: 348px;
+	}
+	
+	.news-column {
+		width:200px;
+	}
+	
+	#logos li {
+		padding: 20px 40px;
+	}
+	
+	.we {
+		padding-left: 40px;
+	}
+
+	.collaborate {
+		padding-left: 64px;
+	}
+	
+	.project-column {
+		width:254px;
 	}
 }
 
@@ -949,6 +1001,8 @@ px      68    160    252    */
 		margin:0;
 		clear:both;
 	}
+	
+	
 	
 }
 
