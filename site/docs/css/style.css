@@ -98,7 +98,7 @@ body {
 	text-decoration:none;
 }
 
-.small-special, #footer-nav li a {
+.small-special {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 10px;
 	font-weight: normal;
@@ -211,7 +211,7 @@ h1.documentFirstHeading {
 
 #header-logo {
 	float:left;
-	padding:20px;
+	padding:14px 14px 10px 14px;
 }
 
 /* Navigation */
@@ -229,7 +229,7 @@ h1.documentFirstHeading {
 	display:block;
 	float:left;
 	list-style-type: none;
-	padding: 56px 0px;
+	padding: 52px 0px;
 	text-transform: lowercase;
 }
 
@@ -583,8 +583,8 @@ body.section-projects #content-core {
 /* About section */
 
 .we {
-	height: 24px;
-	padding-left: 54px;
+	height: 30px;
+	padding-left: 44px;
 }
 
 .are {
@@ -600,7 +600,7 @@ body.section-projects #content-core {
 }
 
 .collaborate {
-	padding-left: 84px;
+	padding-left: 74px;
 	background: url('../../images/icons/canoe.png') left center no-repeat;
 }
 
@@ -723,6 +723,13 @@ body.section-projects #content-core {
 	height: 180px;
 	margin: 0 auto;
 	background: url('../../images/projects/plone.png') center no-repeat;
+}
+
+.python-project {
+	width: 180px;
+	height: 180px;
+	margin: 0 auto;
+	background: url('../../images/projects/python.png') center no-repeat;
 }
 
 body.section-projects .tileItem .tileBody, body.section-projects .tileItem .tileFooter {
