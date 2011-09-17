@@ -275,7 +275,7 @@ h1.documentFirstHeading {
 
 #searchGadget {
 	line-height:16px;
-	border: 1px solid #dadada;
+	border: 1px solid #cacaca;
 	float: right;
 	background: transparent;
 	margin: 4px;
@@ -471,6 +471,10 @@ body.section-projects #content-core {
 
 .gradient-vert-lite {
 	background: #52517f url(../../images/background-5.gif) repeat-x 0 0;
+}
+
+.gradient-vert-lite-small {
+	background: #f1f1f1 url(../../images/background-6.gif) repeat-x 0 0;
 }
 
 .column-title, .slide .item-title {
