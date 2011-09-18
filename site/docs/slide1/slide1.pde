@@ -3,9 +3,9 @@
 ArrayList<vPoint> points = new ArrayList<vPoint>();
 int counter = 0;
 float C = 35;
-float R2 = C*C*1.2;
+float R2 = C*C;
 float S = 0.035;
-float F = 0.9;
+float F = 0.88;
 float zDim = 120;
 float counter = 0;
 float sinc, cosc;
