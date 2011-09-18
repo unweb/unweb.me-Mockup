@@ -142,14 +142,14 @@ a {
 }
 
 h1.documentFirstHeading {
-        background: url("../../images/background-2v.gif") repeat-x scroll 0 0 #4D8ED4;
-        color: #FFFFFF;
+	background: url("../../images/background-2v.gif") repeat-x scroll 0 0 #4D8ED4;
+	color: #FFFFFF;
 	padding: 28px 22px;
 	text-shadow: 1px 1px 9px #777777;
-        font-family: 'Conv_MavenPro-Regular',Helvetica,Arial,sans-serif;
-    	font-size: 22px;
-    	font-weight: normal;
-    	line-height: 26px;
+	font-family: 'Conv_MavenPro-Regular',Helvetica,Arial,sans-serif;
+	font-size: 22px;
+	font-weight: normal;
+	line-height: 26px;
 }
 
 .blog-item h1.documentFirstHeading {
@@ -625,6 +625,39 @@ body.section-projects #content-core {
 
 #blog a:hover {
 	text-decoration: underline;
+}
+
+#blog .post-title {
+	padding: 16px 0;
+	margin: 16px 0 0 0;
+	border-bottom: 1px solid #cfcfcf;
+}
+
+#blog .post-properties {
+	overflow: auto;
+	width: 100%;
+	background: url("../../images/background-1.gif") repeat 0 0;
+	padding: 6px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+#blog .post-author, #blog .post-date, #blog .post-tags {
+	display: block;
+	float: left;
+	height: 16px;
+	padding: 0 22px;
+}
+
+#blog .post-author {
+	background: url('../../images/pen_small.png') no-repeat 0 0;
+}
+
+#blog .post-date {
+	background: url('../../images/calendar_small.png') no-repeat 0 0;
+}
+
+#blog .post-tags {
+	background: url('../../images/tag_small.png') no-repeat 0 0;
 }
 
 #blog .DocumentDescription {
