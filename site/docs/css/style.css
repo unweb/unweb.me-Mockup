@@ -477,6 +477,10 @@ body.section-projects #content-core {
 	background: #f1f1f1 url(../../images/background-6.gif) repeat-x 0 0;
 }
 
+.dotted-bg {
+	background: url("../../images/background-1.gif") repeat 0 0;
+}
+
 .column-title, .slide .item-title {
 	padding: 16px 0;
 	margin: 16px 0;
@@ -722,10 +726,6 @@ body.section-projects #content-core {
         text-decoration: underline;
 }
 
-.dotted-bg {
-	background: url("../../images/background-1.gif") repeat 0 0;
-}
-
 
 /* Prjects Section */
 
@@ -746,29 +746,31 @@ body.section-projects #content-core {
 
 .project-column, body.section-projects .tileItem {
 	width:298px;
-	margin: 0 0 16px 0;
+	margin: 32px 0 16px 0;
 	padding: 0;
 	text-align: center;
 }
 
-.default-project {
+.image-wrapper {
 	width: 180px;
-	height: 180px;
 	margin: 0 auto;
+}
+
+.default-project, .plone-project, .python-project {
+	width: 180px;
+	height: 140px;
+	margin: 0 auto;
+}
+
+.default-project {
 	background: url('../../images/projects/sphere.png') center no-repeat;
 }
 
 .plone-project {
-	width: 180px;
-	height: 180px;
-	margin: 0 auto;
 	background: url('../../images/projects/plone.png') center no-repeat;
 }
 
 .python-project {
-	width: 180px;
-	height: 180px;
-	margin: 0 auto;
 	background: url('../../images/projects/python.png') center no-repeat;
 }
 
