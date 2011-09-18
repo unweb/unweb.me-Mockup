@@ -510,6 +510,10 @@ body.section-projects #content-core {
 	width: 504px;
 }
 
+.double-wide {
+	width: 596px;
+}
+
 .triple {
 	width: 748px;
 }
@@ -645,12 +649,12 @@ body.section-projects #content-core {
 }
 
 .portletHeader {
-    	border-bottom: 1px solid #CFCFCF;
-    	margin: 16px 0;
-        padding: 16px 0;
-        font-family: 'Conv_MavenPro-Regular',Helvetica,Arial,sans-serif;
-    	font-size: 22px;
-    	font-weight: normal;
+	border-bottom: 1px solid #CFCFCF;
+	margin: 16px 0;
+	padding: 16px 0;
+	font-family: 'Conv_MavenPro-Regular',Helvetica,Arial,sans-serif;
+	font-size: 22px;
+	font-weight: normal;
    	line-height: 26px;
 }
 
@@ -677,7 +681,7 @@ body.section-projects #content-core {
 	clear: left;
 	display: block;
 	font-size: 9px;
-    	font-style: normal;
+    font-style: normal;
 	font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif !important;
 }
 
@@ -693,8 +697,8 @@ body.section-projects #content-core {
 /* Prjects Section */
 
 #category {
-    	color: #666666;
-    	font-size: 90%;
+	color: #666666;
+	font-size: 90%;
  	margin-bottom: 1em;
 	text-align: right;
 	padding-right: 30px;
@@ -942,72 +946,100 @@ px      68    160    252    */
 
 @media only screen and (max-width: 767px) {
 	
-	.section, .hr, .slide-text {
-		width: 252px;
+	body {
+		font: 11px/18px Helvetica, Arial, serif;
+	}
+
+	.big {
+		font-size: 14px;
+		line-height: 1.36em;
+	}
+	
+	.special {
+		font-size: 12px;
+	}
+
+	#header, #search-bar, #image-slider, .section, #footer, .hr, #content-wrapper {
+		width: 320px;
 	}
 	
 	#header-logo {
-		padding: 32px 0;
-	}
-	
-	#header-logo img {
-		width: 252px;
-		height: auto;
-		padding: 0 0 16px 0;
-	}
-	
-	#punch-line {
-		font-size: 13px;
-		padding: 14px 0;
-		float: left;
-		clear: both;
 		width: 100%;
-		border-top: 1px solid #ccc;
+		text-align: center;
+		padding:14px 0 10px 0;
 	}
 	
-	#list-nav li {
-		font-size: 10px;
-		padding: 10px  9px 10px 0;
+	#nav {
+		clear: both;
+		width:100%;
+		border-top: 1px solid #ddd;
 	}
 	
-	#lang-search {
-		display: none;
-		padding-top: 0px;
-		float:left;
+	#list-nav li {  
+		padding: 12px 2px;
 	}
 	
-	#main {
-		padding: 24px 0;
+	#list-nav a {  
+		padding: 0 12px;
 	}
 	
-	#news {
-		padding: 24px 0;
+	.bigger, h3, #portlets-below dt.portletHeader {
+		font-size: 18px;
+		line-height: 22px;
+		padding: 16px;
 	}
 	
-	#logo-wrapper {
-		width:252px;
-		margin:0 auto;
+	.big, h4, h2.tileHeadline {
+		font-size: 16px;
+		line-height: 20px;
 	}
-	
-	#logos {
-		padding: 24px 0;
-	}
-	
-	.logo {
-		width: 102px;
-		height: auto;
-		padding: 5px;
-		margin: 6px;
-	}
-	
+
 	.column {
-		width: 252px;
-		margin:0;
-		clear:both;
+		margin: 12px 0;
+		width: 280px;
 	}
 	
+	.wide {
+		width: 280px;
+	}
 	
+	.double {
+		width: 280px;
+	}
 	
+	.triple {
+		width: 280px;
+	}
+	
+	.half-width {
+		width: 280px;
+	}
+	
+	.news-column {
+		margin-right: 0px;
+		width: 280px;
+	}
+	
+	#logos li {
+		padding: 12px 24px;
+	}
+	
+	.we {
+		padding-left: 40px;
+	}
+
+	.collaborate {
+		padding-left: 64px;
+	}
+	
+	.project-column, .default-project, .plone-project, .python-project {
+		width:160px;
+	}
+	
+	.project-column img {
+		width: 160px;
+		height: auto;
+	}
 }
 
 /*		Wide Mobile Layout: 480px.
