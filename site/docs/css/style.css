@@ -274,13 +274,13 @@ h1.documentFirstHeading {
 }
 
 #searchGadget {
+	background: transparent url("../../images/background-1.gif") repeat 0 0;
 	line-height:16px;
 	border: 1px solid #cacaca;
 	float: right;
-	background: transparent;
 	margin: 4px;
 	color: #282828;
-        width: 210px;
+    width: 210px;
 }
 
 #searchGadget.inputLabelActive {
@@ -744,7 +744,7 @@ body.section-projects #content-core {
 	padding-bottom:20px;
 }
 
-.project-column, body.section-projects .tileItem {
+.project-column, .solution-column, body.section-projects .tileItem {
 	width:298px;
 	margin: 32px 0 16px 0;
 	padding: 0;
@@ -818,6 +818,30 @@ body.section-blog #parent-fieldname-description {
     line-height: 1.5em;
 
 }
+
+/* Solutions Section */
+
+.solutions-title {
+	padding: 10px 0;
+	margin: 10px 0;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+}
+
+.solution-column {
+	text-align: left;
+	margin-top: 0px;
+}
+
+.solution-column p {
+	padding: 0 12px;
+}
+
+.solution-column ul {
+	list-style: none;
+	padding: 12px;
+}
+
 /* Footer Section */
 
 #footer-wrapper {
