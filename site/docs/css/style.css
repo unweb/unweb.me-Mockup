@@ -218,7 +218,6 @@ h1.documentFirstHeading {
 
 #nav {
 	float:right;
-	overflow: auto;
 }
 
 #list-nav {
@@ -236,7 +235,9 @@ h1.documentFirstHeading {
 #list-nav a {
 	color: #777;
 	text-shadow: 0px 1px 1px #fff;
-    text-decoration: none;    
+        text-decoration: none;    
+        font-family: 'Conv_MavenPro-Regular',Helvetica,Arial,sans-serif;
+        font-size: 16px;
 	padding: 0 16px;
 }
 
@@ -349,6 +350,10 @@ body.section-state-of-the-art-information-systems #image-slider {
   position:relative;
 }
 
+.slide .item-title {
+	margin-top: 10px !important;
+}
+
 .slide ul {
 	padding-left:20px;
 	list-style: square;
@@ -413,6 +418,10 @@ body.section-state-of-the-art-information-systems #image-slider {
 #content {
 	padding: 0 18px;
 
+}
+
+body.section-about-us #content-core {
+	margin-left: -18px;
 }
 
 #content h1.documentFirstHeading {
@@ -701,7 +710,7 @@ body.section-projects #content-core {
    	margin-top: 20px !important;
    	margin-left: 0px;
    	font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif !important;
-   	font-size: 12px !important;
+/*   	font-size: 12px !important; */
 }
 
 .portletCollection .portletItem {
@@ -710,7 +719,8 @@ body.section-projects #content-core {
 }
 
 .portletItem a {
-	color: #282828;
+        color: #444444;
+/*	color: #282828; */
 }
 
 .portletItem a .portletItemDetails {
@@ -799,10 +809,11 @@ body.section-projects .tileItem .tileBody, body.section-projects .tileItem .tile
     margin-left: 0;
     padding-top: 20px;
     padding-bottom: 20px;
+    width: 596px;
 }
 
 body.section-blog #parent-fieldname-description {
-    width: 504px;
+    width: 596px;
 }
 
 #content-core p, #content-core table, #content-core dl, dl.portlet p, dl.portlet {
@@ -906,10 +917,19 @@ body.section-blog #parent-fieldname-description {
 }
 
 #viewlet-below-content {
-    clear:both;
+    clear: both;
+}
+
+body.section-solutions #viewlet-below-content {
+    width: 228px;
+    background: url("../../images/background-3.gif") repeat-y scroll 0 0 transparent;
+    padding: 0 18px 32px;
+    position: absolute;
+    right: 0;
+    top: 84px;
 }
 #category {
-    width: 504px;
+    width: 596px;
 }
 
 /*		Tablet Layout: 768px.
