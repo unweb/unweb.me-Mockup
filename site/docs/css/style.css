@@ -749,11 +749,11 @@ body.section-projects #content-core {
 	padding-bottom:20px;
 }
 
-.project-column, .solution-column, body.section-projects .tileItem {
+.project-column, .solution-column, body.section-projects .tileItem, .section-solutions #portlets-below .cell {
 	width:298px;
 	margin: 32px 0 16px 0;
 	padding: 0;
-	text-align: center;
+    text-align: center;
 }
 
 .image-wrapper {
