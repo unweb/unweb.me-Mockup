@@ -911,6 +911,7 @@ body.section-blog #parent-fieldname-description {
     clear: both;
 }
 
+/*
 body.section-solutions #viewlet-below-content {
     width: 228px;
     background: url("../../images/background-3.gif") repeat-y scroll 0 0 transparent;
@@ -919,6 +920,8 @@ body.section-solutions #viewlet-below-content {
     right: 0;
     top: 84px;
 }
+*/
+
 #category {
     width: 596px;
 }
