@@ -648,6 +648,12 @@ body.section-projects #content-core {
     float:right;
 }
 
+#blog .post-date, #blog .post-tags {
+    display: block;
+    height: 16px;
+    padding: 6px 24px;
+}
+
 #blog .post-date {
 	background: url('../../images/calendar_small.png') no-repeat 0 5px;
 }
@@ -659,7 +665,6 @@ body.section-projects #content-core {
 #blog .DocumentDescription {
 	padding: 0 0 1em 0;
 	margin: 1em 0;
-	border-bottom: 1px solid #ccc;
 }
 
 #blog-sidebar, #portal-column-two {
