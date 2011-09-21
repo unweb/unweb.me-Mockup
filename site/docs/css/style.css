@@ -441,14 +441,15 @@ h3.column-title a{
 }
 
 #content-core {
-    width: 504px;
+    width: 596px;
+/*    min-height: 603px; */
 }
 
 #portal-column-two {
      position: absolute;
     right: 0;
     top: 84px;
-    width: 320px;
+    width: 228px;
     background:transparent url(../../images/background-3.gif) repeat-y 0 0;
     padding: 0 18px 32px;
 }
@@ -923,7 +924,7 @@ body.section-blog #parent-fieldname-description {
 body.section-solutions #viewlet-below-content {
     width: 228px;
     background: url("../../images/background-3.gif") repeat-y scroll 0 0 transparent;
-    padding: 0 18px 32px;
+    padding: 0 18px 5px;
     position: absolute;
     right: 0;
     top: 84px;
