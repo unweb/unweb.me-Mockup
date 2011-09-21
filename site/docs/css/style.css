@@ -643,30 +643,17 @@ body.section-projects #content-core {
 }
 
 #blog .post-properties {
-	overflow: auto;
-	width: 100%;
 	background: url("../../images/background-1.gif") repeat 0 0;
-	padding: 6px 0;
-	border-bottom: 1px solid #ccc;
-}
-
-#blog .post-author, #blog .post-date, #blog .post-tags {
-	display: block;
-	float: left;
-	height: 16px;
-	padding: 0 22px;
-}
-
-#blog .post-author {
-	background: url('../../images/pen_small.png') no-repeat 0 0;
+	padding: 4px 0;
+    float:right;
 }
 
 #blog .post-date {
-	background: url('../../images/calendar_small.png') no-repeat 0 0;
+	background: url('../../images/calendar_small.png') no-repeat 0 5px;
 }
 
 #blog .post-tags {
-	background: url('../../images/tag_small.png') no-repeat 0 0;
+	background: url('../../images/tag_small.png') no-repeat 0 5px;
 }
 
 #blog .DocumentDescription {
