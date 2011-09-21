@@ -238,7 +238,7 @@ h1.documentFirstHeading {
         text-decoration: none;    
         font-family: 'Conv_MavenPro-Regular',Helvetica,Arial,sans-serif;
         font-size: 16px;
-	padding: 0 16px;
+	padding: 60px 16px;
 }
 
 #list-nav li:hover {
@@ -275,7 +275,6 @@ h1.documentFirstHeading {
 }
 
 #searchGadget {
-	background: transparent url("../../images/background-1.gif") repeat 0 0;
 	line-height:16px;
 	border: 1px solid #cacaca;
 	float: right;
@@ -481,10 +480,6 @@ body.section-projects #content-core {
 
 .gradient-vert-lite {
 	background: #52517f url(../../images/background-5.gif) repeat-x 0 0;
-}
-
-.gradient-vert-lite-small {
-	background: #f1f1f1 url(../../images/background-6.gif) repeat-x 0 0;
 }
 
 .dotted-bg {
