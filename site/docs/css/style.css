@@ -749,7 +749,7 @@ body.section-projects #content-core {
 	padding-bottom:20px;
 }
 
-.project-column, .solution-column, body.section-projects .tileItem, .section-solutions #portlets-below .cell {
+.project-column, .solution-column, body.section-projects .tileItem {
 	width:298px;
 	margin: 32px 0 16px 0;
 	padding: 0;
@@ -782,7 +782,6 @@ body.section-projects #content-core {
 body.section-projects .tileItem .tileBody, body.section-projects .tileItem .tileFooter {
 	display: none
 }
-
 
 #open-source ul {
 	padding:24px;
@@ -828,6 +827,12 @@ body.section-blog #parent-fieldname-description {
 	margin: 10px 0;
 	border-bottom: 1px solid #ccc;
 	text-align: center;
+}
+
+.section-solutions #portlets-below .cell {
+	width:298px;
+	margin: 32px 0 16px 0;
+	padding: 0;
 }
 
 .solution-column {
