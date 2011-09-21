@@ -71,17 +71,15 @@
 	<canvas id="canvas2" class="processing-canvas" data-processing-sources="++theme++unweb.me/docs/slide3/slide3.pde"></canvas>
     </replace>
 
-   <!-- projects .portlet-collection-open-source -->
-    <replace content='//*[@id="portlets-below"]' theme='//*[@id="open-source"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-projects ')])"/>
-   
-    <!-- drop first listing/pagination on blog -->
-    <drop content="//*[@class='listingBar'][1]" if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-blog ')])" />
-    <append content='//*[@id="portal-column-two"]' theme='//*[@id="content-wrapper"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-blog ')])" />
-
+    <!-- section solutions -->
     <append content='//*[@id="portal-column-two"]' theme='//*[@id="content-wrapper"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-solutions ')])" />
 
     <replace content='//*[@id="portletwrapper-436f6e74656e7457656c6c506f72746c6574732e42656c6f77506f72746c65744d616e61676572310a636f6e746578740a2f756e7765622f736f6c7574696f6e732f736f6c7574696f6e730a736f6369616c2d6d65646961"]' theme='//*[@id="column-socialmedia"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-solutions ')])"/>
 
+   <!-- projects .portlet-collection-open-source -->
+    <replace content='//*[@id="portlets-below"]' theme='//*[@id="open-source"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-projects ')])"/>
+
+    <!-- section projects - open source products -->
     <replace css:content=".portlet-collection-open-source">
 	<h3 class="section-title bigger gradient-vert">Open Source Products</h3>
 	<div class="projects-wrapper">
@@ -104,6 +102,10 @@
 	</xsl:for-each>
 	</div>
     </replace>
+
+    <!-- drop first listing/pagination on blog -->
+    <drop content="//*[@class='listingBar'][1]" if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-blog ')])" />
+    <append content='//*[@id="portal-column-two"]' theme='//*[@id="content-wrapper"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-blog ')])" />
 
     <!-- footer -->
     <append content='//*[@id="footer-portlets"]/*' theme='//*[@id="footer"]' />
