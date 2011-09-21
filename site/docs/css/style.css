@@ -702,7 +702,6 @@ body.section-projects #content-core {
 
 .portletItem {
    	line-height: 1.2em;
-   	margin-bottom: 15px;
    	margin-top: 20px !important;
    	margin-left: 0px;
    	font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif !important;
@@ -810,10 +809,6 @@ body.section-projects .tileItem .tileBody, body.section-projects .tileItem .tile
 
 body.section-blog #parent-fieldname-description {
     width: 596px;
-}
-
-#content-core p, #content-core table, #content-core dl, dl.portlet p, dl.portlet {
-    margin-bottom: 1em;
 }
 
 #content img.tileImage, #content div.newsImageContainer {
