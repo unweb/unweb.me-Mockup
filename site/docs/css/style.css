@@ -645,6 +645,7 @@ body.section-projects #content-core {
 #blog .post-properties {
 	background: url("../../images/background-1.gif") repeat 0 0;
 	padding: 4px 0;
+    margin-top:1em;
     float:right;
 }
 
@@ -655,11 +656,11 @@ body.section-projects #content-core {
 }
 
 #blog .post-date {
-	background: url('../../images/calendar_small.png') no-repeat 0 5px;
+	background: url('../../images/calendar_small.png') no-repeat 3px 5px;
 }
 
 #blog .post-tags {
-	background: url('../../images/tag_small.png') no-repeat 0 5px;
+	background: url('../../images/tag_small.png') no-repeat 3px 5px;
 }
 
 #blog .DocumentDescription {
