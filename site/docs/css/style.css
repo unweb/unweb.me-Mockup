@@ -445,9 +445,9 @@ h3.column-title a{
 }
 
 #portal-column-two {
-     position: absolute;
+    position: absolute;
     right: 0;
-    top: 84px;
+    top: 82px;
     width: 228px;
     background:transparent url(../../images/background-3.gif) repeat-y 0 0;
     padding: 0 18px 32px;
