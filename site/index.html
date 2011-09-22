@@ -11,6 +11,7 @@
 		<link rel="stylesheet" media="all" href="docs/maven/fonts.css"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+		<!--[if IE]><script type="text/javascript" src="docs/js/libs/excanvas.compiled.js"></script><![endif]-->
 	</head>
 	
 	<body lang="en" class="section-state-of-the-art-information-systems">
@@ -30,7 +31,7 @@
 					</ul>
 				</div>
 			</div>
-			<div id="search-bar" class="gradient-vert-lite-small">
+			<div id="search-bar">
 				<span id="lang-select" class="small"> EN GR </span>
 				<input type="text" id="searchGadget" />
 			</div>
@@ -172,7 +173,13 @@
 		
 		<script src="docs/js/libs/processing-1.2.3.min.js"></script>  
 		<script type="text/javascript" src="docs/js/frontpage.js"></script>
+
+
+
 	</body>
+               <script type="text/javascript" charset="UTF-8" src="docs/js/libs/reflection.js"></script>
+                <script type="text/javascript" src="docs/js/projects.js"></script>
+
         <script>
 	            $("#logos ul li").hover(function() { //On hover...
 

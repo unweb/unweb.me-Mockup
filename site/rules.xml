@@ -4,7 +4,6 @@
 
     <theme href="index.html" />
 
-
     <!-- replace title !-->
     <replace content="/html/head/title" theme="/html/head/title" />
 
@@ -18,6 +17,16 @@
     <drop content="/html/head/style[contains(text(),'cachekey')]" />
     <drop content="/html/head/link[contains(@rel, 'kinetic-stylesheet')]" />
 
+    <!-- navigation -->
+    <copy content='//*[@id="portal-globalnav"]/*' theme='//*[@id="list-nav"]' />
+    <copy content='//*[@id="portal-globalnav"]/*' theme='//*[@id="footer-nav"]' />
+
+    <!-- searchbox -->
+    <copy content='//*[@id="portal-searchbox"]/form' theme='//*[@id="search-bar"]' />
+
+    <!-- remove breadcrumbs -->
+    <drop content='//*[@id="portal-breadcrumbs"]' />
+
     <!-- copy body attrs -->
     <prepend theme="/html/body" content="/html/body/@class" />
     <prepend theme="/html/body" content="/html/body/@id" />	
@@ -25,10 +34,6 @@
 
     <!--copy content='//*[@id="portal-logo"]' theme='//*[@id="logo"]' /-->
     <!--copy content='//*[@id="portal-languageselector"]' theme='//*[@id="languageselector"]' /-->
-    
-    <!-- navigation -->
-    <copy content='//*[@id="portal-globalnav"]/*' theme='//*[@id="list-nav"]' />
-    <copy content='//*[@id="portal-globalnav"]/*' theme='//*[@id="footer-nav"]' />
     
     <!-- main content for pages besides home -->
     <replace content='//*[@id="portal-column-content"]/*' theme='//*[@id="main"]' if-content="not(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
@@ -38,33 +43,22 @@
     <copy css:content='.AbovePortletManager2 .portletContent' theme='//div[@class="slide"][2]/div[@class="slide-text wide"]' />
     <copy css:content='.AbovePortletManager3 .portletContent' theme='//div[@class="slide"][3]/div[@class="slide-text wide"]' />
 
-    <!-- remove breadcrumbs -->
-    <drop content='//*[@id="portal-breadcrumbs"]' />
-
     <!-- remove image slider if not in home -->
     <drop css:theme="#image-slider" if-content="not(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
 
     <!-- leave client logos on index page-->
     <drop theme='//*[@id="logos"]' if-content="not(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')]|/html/body[contains(concat(' ',normalize-space(@class),' '),' section-projects ')])" />
 
-    <!-- footer -->
-    <append content='//*[@id="footer-portlets"]/*' theme='//*[@id="footer"]' />
-
-    <!-- searchbox -->
-    <copy content='//*[@id="portal-searchbox"]/form' theme='//*[@id="search-bar"]' />
-
-
     <!-- drop slideshow script for pages other than home -->
     <drop theme='/html/body//script' if-content="not(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
-
-    <!-- drop page title and description in home page -->
-    <drop content='//*[@id="parent-fieldname-title"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
-    <drop content='//*[@id="parent-fieldname-description"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
-
 
     <!-- copy home page content -->
     <replace content='//*[@id="content-core"]' theme='//*[@id="col-1"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])"/>
     <copy content='//*[@id="portlets-below"]' theme='//*[@id="blog-col"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])"/> 
+
+    <!-- drop page title and description in home page -->
+    <drop content='//*[@id="parent-fieldname-title"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
+    <drop content='//*[@id="parent-fieldname-description"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
 
     <!-- fix canvas data processing sources that are ignored normally by diazo -->
     <replace css:theme="#canvas0">
@@ -77,18 +71,13 @@
 	<canvas id="canvas2" class="processing-canvas" data-processing-sources="++theme++unweb.me/docs/slide3/slide3.pde"></canvas>
     </replace>
 
-    <!-- about us -->
-    <replace content='//*[@id="portlets-below"]' theme='//*[@id="people"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-about-us ')])"/>
-
+    <!-- section solutions -->
+    <append content='//*[@id="portal-column-two"]' theme='//*[@id="content-wrapper"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-solutions ')])" />
 
    <!-- projects .portlet-collection-open-source -->
     <replace content='//*[@id="portlets-below"]' theme='//*[@id="open-source"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-projects ')])"/>
 
-
-    <!-- drop first listing/pagination on blog -->
-    <drop content="//*[@class='listingBar'][1]" if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-blog ')])" />
-    <append content='//*[@id="portal-column-two"]' theme='//*[@id="content-wrapper"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-blog ')])" />
-
+    <!-- section projects - open source products -->
     <replace css:content=".portlet-collection-open-source">
 	<h3 class="section-title bigger gradient-vert">Open Source Products</h3>
 	<div class="projects-wrapper">
@@ -111,4 +100,12 @@
 	</xsl:for-each>
 	</div>
     </replace>
+
+    <!-- drop first listing/pagination on blog -->
+    <drop content="//*[@class='listingBar'][1]" if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-blog ')])" />
+
+    <append content='//*[@id="portal-column-two"]' theme='//*[@id="content-wrapper"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-blog ')])" />
+
+    <!-- footer -->
+    <append content='//*[@id="footer-portlets"]/*' theme='//*[@id="footer"]' />
 </rules>
