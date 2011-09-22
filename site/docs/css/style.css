@@ -428,11 +428,22 @@ body.section-about-us #content-core {
 	margin-right: -18px;
 }
 
-.column, #content-core .tileItem {
-	width: 228px;
-	padding: 0px 18px 32px;
-	float:left;
-	color: #444;
+.column {
+    color: #444444;
+    float: left;
+    padding: 0 18px 32px;
+    width: 228px;
+}
+
+#content-core .tileItem {
+        width: 250px;
+	padding: 20px 0px 10px 33px;
+        float:left;
+        color: #444;
+}
+
+.tileImage canvas {
+	margin-top: 4px;
 }
 
 h3.column-title a{
@@ -442,6 +453,10 @@ h3.column-title a{
 #content-core {
     width: 596px;
 /*    min-height: 603px; */
+}
+
+#content-core .big a {
+	color: #444444;
 }
 
 #portal-column-two {
@@ -458,11 +473,6 @@ body.section-projects #content-core {
 
 #blog-listing {
     padding: 0 18px 32px;
-}
-
-#content-core .tileItem {
-        height: 228px;
-	padding: 20px 18px 2px;
 }
 
 .listingBar {
@@ -785,6 +795,10 @@ body.section-projects .tileItem .tileBody, body.section-projects .tileItem .tile
 	padding:5px;
 }
 
+#content-core p {
+    margin-top: 1em;
+}
+
 #content-core ul {
     list-style-type: disc;
     margin-left: 2em;
@@ -795,7 +809,7 @@ body.section-projects .tileItem .tileBody, body.section-projects .tileItem .tile
     font: bold 1.25em "Helvetica Neue",Arial,FreeSans,sans-serif;
     margin-left: 0;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     width: 596px;
 }
 
@@ -814,7 +828,6 @@ body.section-blog #parent-fieldname-description {
 }
 
 /* Solutions Section */
-
 .solutions-title {
 	padding: 10px 0;
 	margin: 10px 0;
@@ -824,8 +837,8 @@ body.section-blog #parent-fieldname-description {
 
 .section-solutions #portlets-below .cell {
 	width:298px;
-	margin: 32px 0 16px 0;
 	padding: 0;
+    float: left;
 }
 
 .solution-column {
@@ -848,6 +861,7 @@ body.section-blog #parent-fieldname-description {
 	background:#4d8ed4 url(../../images/background-2v.gif) repeat-x 0 0;
 	width: 100%;
 	border-top:1px solid #aaa;
+	clear: both;
 }
 
 #footer-logo {
@@ -903,6 +917,14 @@ body.section-blog #parent-fieldname-description {
 
 .twtr-bd {
     padding: 0 0 0 12px !important;
+}
+
+#twtr-widget-1 .twtr-bd .twtr-timeline {
+    background: url("/++theme++unweb.me/images/loading.gif") no-repeat scroll 53px 10px transparent !important;
+}
+
+.twtr-tweets {
+    background-color: #f1f1f1;
 }
 
 #viewlet-below-content {
