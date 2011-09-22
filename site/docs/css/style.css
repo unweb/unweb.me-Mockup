@@ -631,7 +631,7 @@ body.section-projects #content-core {
 	text-decoration: underline;
 }
 
-#blog .post-title {
+.post-title {
 	padding: 16px 0;
 	margin: 16px 0 0 0;
 	border-bottom: 1px solid #cfcfcf;
