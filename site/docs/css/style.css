@@ -664,7 +664,7 @@ body.section-projects #content-core {
 	background: url('../../images/tag_small.png') no-repeat 0 0;
 }
 
-#blog .DocumentDescription {
+.DocumentDescription {
 	padding: 0 0 1em 0;
 	margin: 1em 0;
 	border-bottom: 1px solid #ccc;
@@ -840,6 +840,10 @@ body.section-blog #parent-fieldname-description {
 .solution-column ul {
 	list-style: none;
 	padding: 12px;
+}
+
+.solution-image {
+	width: 100%;
 }
 
 /* Footer Section */
