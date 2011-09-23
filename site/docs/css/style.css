@@ -247,9 +247,8 @@ h1.documentFirstHeading {
 }
 
 #list-nav .selected {
-	background:#52517f url(../../images/background-2v.gif) repeat-x 0 0;
+	background:#4D8ED4 url(../../images/background-2v.gif) repeat-x 0 0;
 	color: #fff;
-	
 }
 
 #list-nav li.selected a{
@@ -280,7 +279,8 @@ h1.documentFirstHeading {
 	float: right;
 	margin: 4px;
 	color: #282828;
-    width: 210px;
+   	width: 210px;
+	padding-left: 3px;
 }
 
 #searchGadget.inputLabelActive {
@@ -300,12 +300,20 @@ h1.documentFirstHeading {
 	border-bottom: 1px solid #4d8ed4;
 	border-top: 0px solid transparent;
 	border-right: 0px solid transparent;
+	margin: 0;
+}
+
+#LSResult fieldset {
+	border: none;
+	padding: 0;
 }
 
 .LSRow {
 	list-style-type: none;
 	margin-top:10px;
 	margin-bottom:10px;
+	width: auto;
+	padding: 0;
 }
 
 .LSRow a {
@@ -319,6 +327,8 @@ h1.documentFirstHeading {
 #livesearchLegend {
 	font-weight: bold;
 	color: #777;
+	padding: 0;
+	background-color: transparent;
 	font-size: 10px;
 }
 /* Image Slider */
@@ -360,6 +370,7 @@ body.section-state-of-the-art-information-systems #image-slider {
 
 .slide ul li {
 	margin-top:20px;
+	display: list-item;
 }
 
 .slide-text {
@@ -416,11 +427,26 @@ body.section-state-of-the-art-information-systems #image-slider {
 
 #content {
 	padding: 0 18px;
+	font-size: 100%;
+	clear:left;
+}
 
+.visualClear {
+	clear: left;
 }
 
 body.section-about-us #content-core {
 	margin-left: -18px;
+}
+
+body.section-about-us .column {
+	width:380px;
+	margin: 10px 0px 10px 15px;
+}
+
+
+body.section-about-us ul.medium {
+	margin-left:65px !important;
 }
 
 #content h1.documentFirstHeading {
@@ -436,8 +462,8 @@ body.section-about-us #content-core {
 }
 
 #content-core .tileItem {
-        width: 250px;
-	padding: 20px 0px 10px 33px;
+        width: 225px;
+	padding: 20px 25px 10px 33px;
         float:left;
         color: #444;
 }
@@ -450,9 +476,44 @@ h3.column-title a{
     color:#444444;
 }
 
+#content {
+	margin: 0;
+}
+
+#content a:link, dl.portlet a:link, dl.portlet a:visited,  #content a:visited, #news a:link, #news a:visited, #content-core h1 a:link, #content-core h2 a:link, #content-core h3 a:link, #content-core h1 a:visited, #content-core h2 a:visited, #content-core h3 a:visited {
+	border-bottom: none;
+	color: #444444;
+}
+
+#content a:hover, #news a:hover, dl.portlet a:hover, a:hover h4 {
+	color: #4D8ED4 !important;
+}
+
+a:link, a:visited, #content-core a:link, #content-core a:visited {
+	color: #4D8ED4;
+}
+
+.managePortletsAboveLink, .managePortletsBelowLink, .manageFooterPortletsLink {
+    clear: none;
+    margin: 20px 30%;
+}
+
+#edit-bar {
+	margin-top: -5px;
+}
+
 #content-core {
     width: 596px;
 /*    min-height: 603px; */
+}
+
+dl.portlet {
+	font-size: 100%;
+}
+
+dl.portlet dt.portletHeader {
+	background: none;
+	padding: 16px 0;
 }
 
 #content-core .big a {
@@ -460,17 +521,30 @@ h3.column-title a{
 }
 
 #portal-column-two {
-    position: absolute;
+    float: right;
+    margin-top: 82px;
     right: 0;
-    top: 82px;
     width: 228px;
     background:transparent url(../../images/background-3.gif) repeat-y 0 0;
     padding: 0 18px 32px;
-}
-body.section-projects #content-core {
-    width: auto;
+    z-index: 1000;
 }
 
+body.template-folder_summary_view.section-projects #content-core {
+    width: auto; 
+}
+
+body.template-folder_summary_view.section-projects #logos {
+    display: block;
+}
+
+body.section-projects #logos {
+    display: none;
+}
+
+body.section-solutions .relatedItems {
+    display: none;
+}
 #blog-listing {
     padding: 0 18px 32px;
 }
@@ -554,8 +628,8 @@ body.section-projects #content-core {
 
 .news-column {
 	float:left;
-	width:236px;
-	padding: 0 15px 0 0;
+	width:220px;
+	padding: 0 16px;
 }
 
 .news-column li {
@@ -570,6 +644,33 @@ body.section-projects #content-core {
 	
 }
 
+/* Tag Cloud section */
+
+.cloud1 {
+font-size: 0.9em;
+}
+.cloud2 {
+font-size: 1.1em;
+}
+.cloud3 {
+font-size: 1.4em;
+}
+.cloud4 {
+font-size: 1.7em;
+}
+.cloud5 {
+font-size: 2.0em;
+}
+.cloud6 {
+font-size: 2.3em;
+}
+.cloud7 {
+font-size: 2.6em;
+}
+
+dl.portletTagCloudPortlet a{
+    color: #4D8ED4;
+}
 /* Logo Section */
 
 #logos {
@@ -611,7 +712,7 @@ body.section-projects #content-core {
 
 .we {
 	height: 30px;
-	padding-left: 44px;
+	padding-left: 65px;
 }
 
 .are {
@@ -627,7 +728,7 @@ body.section-projects #content-core {
 }
 
 .collaborate {
-	padding-left: 74px;
+	padding-left: 65px;
 	background: url('../../images/icons/canoe.png') left center no-repeat;
 }
 
@@ -703,11 +804,12 @@ body.section-projects #content-core {
    	line-height: 26px;
 }
 
-.portletItem {
+dl.portlet dd.portletItem {
    	line-height: 1.2em;
    	margin-top: 20px !important;
    	margin-left: 0px;
    	font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif !important;
+	padding: 0;
 /*   	font-size: 12px !important; */
 }
 
@@ -799,7 +901,7 @@ body.section-projects .tileItem .tileBody, body.section-projects .tileItem .tile
     margin-top: 1em;
 }
 
-#content-core ul {
+#content-core ul, #portal-column-two ul {
     list-style-type: disc;
     margin-left: 2em;
 }
@@ -818,15 +920,18 @@ body.section-blog #parent-fieldname-description {
 }
 
 #content img.tileImage, #content div.newsImageContainer {
-    margin: 0 1em 0.5em;
+    margin: 0 55px 10px;
 }
 
-#content-core li, dl.portlet li {
+#content-core li, dl.portlet li, #portal-column-two li {
     display: list-item;
     line-height: 1.5em;
 
 }
 
+#portal-column-two li {
+    list-style-type: none;
+}
 /* Solutions Section */
 .solutions-title {
 	padding: 10px 0;
@@ -916,7 +1021,6 @@ body.section-blog #parent-fieldname-description {
 .twtr-ft { display: none; }
 
 .twtr-bd {
-    padding: 0 0 0 12px !important;
 }
 
 #twtr-widget-1 .twtr-bd .twtr-timeline {
@@ -925,6 +1029,10 @@ body.section-blog #parent-fieldname-description {
 
 .twtr-tweets {
     background-color: #f1f1f1;
+}
+
+.twtr-widget .twtr-tweet-wrap {
+	padding: 6px 2px !important;
 }
 
 #viewlet-below-content {

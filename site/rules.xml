@@ -2,6 +2,8 @@
        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
        xmlns:css="http://namespaces.plone.org/diazo/css">
 
+
+    <notheme if-path="image_view_fullscreen" />
     <theme href="index.html" />
 
     <!-- replace title !-->
@@ -11,10 +13,9 @@
     <append  content="/html/head/base" theme="/html/head" />
     <append  content="/html/head/meta" theme="/html/head" />
     <append  content='/html/head/script' theme='/html/head' />     
-    <append  content='/html/head/style' theme='/html/head' />
-    <append  content="/html/head/link" theme="/html/head" />
-    <drop content="/html/head/link[contains(@href, 'cachekey')]" />
-    <drop content="/html/head/style[contains(text(),'cachekey')]" />
+    <prepend  content='/html/head/style' theme='/html/head' />
+    <prepend  content="/html/head/link" theme="/html/head" />
+    <drop content="/html/head/link[contains(@href, 'columns')]" />
     <drop content="/html/head/link[contains(@rel, 'kinetic-stylesheet')]" />
 
     <!-- navigation -->
@@ -72,10 +73,13 @@
     </replace>
 
     <!-- section solutions -->
-    <append content='//*[@id="portal-column-two"]' theme='//*[@id="content-wrapper"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-solutions ')])" />
+    <prepend content='//*[@id="portal-column-two"]' theme='//*[@id="content-wrapper"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-solutions ')])" />
+
 
    <!-- projects .portlet-collection-open-source -->
     <replace content='//*[@id="portlets-below"]' theme='//*[@id="open-source"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-projects ')])"/>
+
+    <prepend content='//*[@id="portal-column-two"]' theme='//*[@id="content-wrapper"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-projects ')])" />
 
     <!-- section projects - open source products -->
     <replace css:content=".portlet-collection-open-source">
@@ -104,7 +108,7 @@
     <!-- drop first listing/pagination on blog -->
     <drop content="//*[@class='listingBar'][1]" if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-blog ')])" />
 
-    <append content='//*[@id="portal-column-two"]' theme='//*[@id="content-wrapper"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-blog ')])" />
+    <prepend content='//*[@id="portal-column-two"]' theme='//*[@id="content-wrapper"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-blog ')])" />
 
     <!-- footer -->
     <append content='//*[@id="footer-portlets"]/*' theme='//*[@id="footer"]' />
