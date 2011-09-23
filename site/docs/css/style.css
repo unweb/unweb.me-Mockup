@@ -1039,6 +1039,15 @@ body.section-blog #parent-fieldname-description {
     clear: both;
 }
 
+#people .column p {
+	background: url("../../images/dimo.jpg") no-repeat scroll 0 0 transparent;
+	padding-left: 100px;
+	padding-right: 10px;
+}
+
+#people .column {
+}
+
 /*
 body.section-solutions #viewlet-below-content {
     width: 228px;
