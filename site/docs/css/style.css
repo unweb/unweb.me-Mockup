@@ -171,12 +171,6 @@ h1.documentFirstHeading {
     color: #444444;
 }
 
-
-/* (almost) All elements.. */
-/* Here our main column width is applied to all the elements. The
-  ones that span the whole screen are either not defined here or
-  use wrappers which get the CSS properties */
-
 #header, #search-bar, #image-slider, .section, #footer, .hr {
 	position: relative;
 	width: 896px;
@@ -211,7 +205,7 @@ h1.documentFirstHeading {
 
 #header-logo {
 	float:left;
-	padding:14px 14px 10px 14px;
+	padding:14px 14px 0 18px;
 }
 
 /* Navigation */
@@ -228,7 +222,7 @@ h1.documentFirstHeading {
 	display:block;
 	float:left;
 	list-style-type: none;
-	padding: 52px 0px;
+	padding: 54px 0px;
 	text-transform: lowercase;
 }
 
@@ -243,7 +237,7 @@ h1.documentFirstHeading {
 
 #list-nav li:hover {
 	color:#222;
-	background:#eee;
+	background: #eee url("../../images/background-1.gif") repeat 0 0;
 }
 
 #list-nav .selected {
@@ -337,6 +331,7 @@ h1.documentFirstHeading {
 	background:#4d8ed4 url(../../images/background-2v.gif) repeat-x 0 0;
     display: none;
 	overflow:visible;
+	border-bottom: 1px solid #fafafa;
 }
 
 body.section-state-of-the-art-information-systems #image-slider {
@@ -417,6 +412,7 @@ body.section-state-of-the-art-information-systems #image-slider {
 	padding: 28px 22px;
 	color: #fff;
 	text-shadow: 1px 1px 9px #777;
+	border-bottom: 1px solid #fafafa;
 }
 
 /*
@@ -624,6 +620,7 @@ body.section-solutions .relatedItems {
 
 #news {
 	float:right;
+	border-bottom: 1px solid #ccc;
 }
 
 .news-column {
