@@ -1041,12 +1041,24 @@ body.section-blog #parent-fieldname-description {
 }
 
 #people .column p {
-	background: url("../../images/dimo.png") no-repeat scroll 0 0 transparent;
 	padding-left: 90px;
 	padding-right: 10px;
 }
 
-#people .column {
+#people .column p.provetza {
+	background: url("../../images/provetza.png") no-repeat scroll 0 0 transparent;
+}
+
+#people .column p.dimo {
+	background: url("../../images/dimo.png") no-repeat scroll 0 0 transparent;
+}
+
+#people .column p.chris {
+	background: url("../../images/chris.png") no-repeat scroll 0 0 transparent;
+}
+
+#people .column p.mike {
+	background: url("../../images/mike.png") no-repeat scroll 0 0 transparent;
 }
 
 /*
