@@ -1,7 +1,6 @@
 /* @pjs transparent=true; */
 
 ArrayList<vPoint> points = new ArrayList<vPoint>();
-int counter = 0;
 float C = 35;
 float R2 = C*C;
 float S = 0.035;
@@ -19,13 +18,13 @@ float Cc2 = Cc*Cc;
 vPoint centr = new vPoint(0,0,0);
 
 void setup() {
-  size(896, 320, P2D);
+  size(320, 320, P2D);
   background(0,0);
   frameRate(15);
   while (points.size() < 80) {
     points.add(new vPoint());
   }
-  offsetX = width*0.7;
+  offsetX = width*0.5;
   offsetY = height*0.5;
 }
 
@@ -61,6 +60,12 @@ class vPoint {
     x = px = random(60) - 30;
     y = py = random(60) - 30;
     z = pz = random(60) - 30;
+  }
+  
+  public vPoint(float xin, float yin, float zin) {
+    x = xin;
+    y = yin;
+    z = zin;
   }
   
   void step() {

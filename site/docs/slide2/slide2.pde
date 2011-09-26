@@ -3,7 +3,7 @@
 ArrayList<graphLine> points = new ArrayList<graphLine>();
 
 void setup() {
-  size(896, 320, P2D);
+  size(320, 320, P2D);
   background(0,0);
   frameRate(16);
   noLoop();
@@ -11,8 +11,11 @@ void setup() {
 
 void draw() {
   background(0,0);
-  strokeWeight(2);
+  strokeWeight(1);
   noFill();
+  stroke(255,30);
+  line(1,height*0.2, 1,height*0.8);
+  line(width,height*0.2, width,height*0.8);
   for (int i=0; i<points.size();i++) {
     graphLine l = points.get(i);
     l.draw();
@@ -33,9 +36,11 @@ class graphLine {
   }
   void init() {
     curX = 0;
-    curY = height - random(10);
-    uX = 2 + random(10);
+    curY = height * 0.2 + random( height * 0.6);
+    uX = 1 + random(6);
     uY = 0;
+    uY -= ((int)random(3) - 1)*(curX * 0.01 + 1);
+    uY = min(2, max(-2, uY));
     localPoints = new ArrayList<PVector>();
     localPoints.add(new PVector(curX, curY));
     opacity = 250;
@@ -50,19 +55,19 @@ class graphLine {
       curY += uY;
 
       // Modify velocity
-      if (curX > width* 0.2 && localPoints.size()<20 && random(1)<0.1) {
+      if (localPoints.size()<20 && random(1)<0.1) {
         uY -= ((int)random(3) - 1)*(curX * 0.01 + 1);
-        uY = min(3, max(-3, uY));
+        uY = min(2, max(-2, uY));
         localPoints.add(new PVector(curX,curY,0));
       }
-      if (curY > height * 0.5 && uY>0) {
+      if (curY > height * 0.8 && uY > 0 || curY < height * 0.2 && uY < 0) {
         uY = 0;
         localPoints.add(new PVector(curX,curY,0));
       }
     }
   }
   void draw() {
-    stroke(145, 185, 240, opacity);
+    stroke(255, opacity);
     beginShape();
     for (PVector p : localPoints) {
       vertex(p.x,p.y);
