@@ -462,7 +462,7 @@ body.section-about-us ul.medium {
 	padding: 20px 25px 10px 33px;
         float:left;
         color: #444;
-/*        height: 268px;*/
+        height: 268px;
 }
 
 .tileImage canvas {
@@ -1054,8 +1054,8 @@ body.section-blog #parent-fieldname-description {
 	background: url("../../images/dimo.png") no-repeat scroll 0 0 transparent;
 }
 
-#people .column p.chris {
-	background: url("../../images/chris.png") no-repeat scroll 0 0 transparent;
+#people .column p.cpsaltis {
+	background: url("../../images/cpsaltis.png") no-repeat scroll 0 0 transparent;
 }
 
 #people .column p.mike {
@@ -1207,6 +1207,10 @@ px      68    160    252    */
 		padding: 0 12px;
 	}
 	
+        li#portaltab-index_html {
+		display: none;
+	}
+
 	.bigger, h3, #portlets-below dt.portletHeader {
 		font-size: 18px;
 		line-height: 22px;
