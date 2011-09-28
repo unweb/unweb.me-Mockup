@@ -938,22 +938,22 @@ body.section-blog #parent-fieldname-description {
     list-style-type: none;
 }
 /* Solutions Section */
+
 .solutions-title {
-	padding: 10px 0;
-	margin: 10px 0;
+	padding: 18px 0;
 	border-bottom: 1px solid #ccc;
 	text-align: center;
+	display: block;
 }
 
 .section-solutions #portlets-below .cell {
 	width:298px;
 	padding: 0;
-    float: left;
 }
 
 .solution-column {
 	text-align: left;
-	margin-top: 0px;
+	margin-top: 6px;
 }
 
 .solution-column p {
@@ -961,12 +961,19 @@ body.section-blog #parent-fieldname-description {
 }
 
 .solution-column ul {
+	clear: both;
 	list-style: none;
 	padding: 12px;
 }
 
-.solution-image {
+.solutions-image-wrapper {
 	width: 100%;
+	padding: 20px 0 10px 0;
+}
+
+.solutions-image {
+	display: block;
+	margin: 0 auto;
 }
 
 /* Footer Section */
