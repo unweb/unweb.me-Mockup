@@ -60,6 +60,7 @@ $(document).ready(function(){
     // The actual slide transition function.
     var transition = function(direction) {
       // Resolve boundary conditions and move canvases correctly.
+      slideWidth = slides.outerWidth(true);
       if (direction == 'right' && currentPosition == numberOfSlides) {
         currentPosition = 0;
         $('#slideInner').css({

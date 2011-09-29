@@ -926,7 +926,7 @@ body.section-blog #parent-fieldname-description {
 }
 
 #content img.tileImage, #content div.newsImageContainer {
-    margin: 0 55px 10px;
+    margin: 0 0px 10px;
 }
 
 #content-core li, dl.portlet li, #portal-column-two li {
@@ -1118,6 +1118,7 @@ px      68    160    252    344    436    528    620    712    */
 	#header, #search-bar, #image-slider, .section, #footer, .hr, #content-wrapper {
 		width: 768px;
 	}
+
 	#header-logo {
 		float:left;
 		padding:14px 10px 0 10px;
@@ -1224,7 +1225,7 @@ px      68    160    252    */
 		font-size: 12px;
 	}
 
-	#header, #search-bar, #image-slider, .section, #footer, .hr, #content-wrapper {
+	#header, #search-bar, #image-slider, .section, #footer, .hr, #content-wrapper, #content-core {
 		width: 320px;
 	}
 	
@@ -1234,6 +1235,16 @@ px      68    160    252    */
 		padding:14px 0 10px 0;
 	}
 	
+        #footer-nav {
+                width: 100px;
+        }
+        
+        #footer-logo {
+                width: 50px;
+		padding: 50px 0;
+		text-align: center;
+        }
+
 	#nav {
 		clear: both;
 		width:100%;
@@ -1267,10 +1278,6 @@ px      68    160    252    */
 		top:210px;
 	}
 	
-        li#portaltab-index_html {
-		display: none;
-	}
-
 	.bigger, h3, #portlets-below dt.portletHeader {
 		font-size: 18px;
 		line-height: 22px;
@@ -1349,12 +1356,6 @@ px      68    160    252    */
 		height: auto;
 	}
 	
-	#footer-logo {
-		width: 100%;
-		padding: 20px 0;
-		text-align: center;
-	}
-	
 	#footer-nav {
 		float: none;
 		overflow: auto;
@@ -1388,10 +1389,18 @@ px      68    160    252    344    436    */
 		font-size: 14px;
 	}
 
-	#header, #search-bar, #image-slider, .section, #footer, .hr, #content-wrapper {
+	#header, #search-bar, #image-slider, .section, #footer, .hr, #content-wrapper, #content-core {
 		width: 480px;
 	}
 	
+	#footer-nav {
+		width: 100px;
+	}
+
+	#footer-logo {
+		width: 390px;
+	}
+
 	#header-logo {
 		width: 100%;
 		text-align: center;
