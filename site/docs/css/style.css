@@ -926,7 +926,9 @@ body.section-blog #parent-fieldname-description {
 }
 
 #content img.tileImage, #content div.newsImageContainer {
-    margin: 0 0px 10px;
+    margin: 0;
+    float: none;
+    text-align: center;
 }
 
 #content-core li, dl.portlet li, #portal-column-two li {
