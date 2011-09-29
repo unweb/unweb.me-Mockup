@@ -350,8 +350,16 @@ body.section-state-of-the-art-information-systems #image-slider {
 .slide {
   margin:0 auto;
   width:896px;
-  height:280px;
+  height:320px;
   position:relative;
+}
+
+.slide canvas {
+	width: 320px;
+	height:320px;
+	display: block;
+	position: absolute;
+	left: 460px;
 }
 
 .slide .item-title {
@@ -411,7 +419,7 @@ body.section-state-of-the-art-information-systems #image-slider {
 .section-title {
 	padding: 28px 22px;
 	color: #fff;
-	text-shadow: 1px 1px 9px #777;
+	text-shadow: 0 3px 11px #555;
 	border-bottom: 1px solid #fafafa;
 }
 
@@ -931,22 +939,22 @@ body.section-blog #parent-fieldname-description {
     list-style-type: none;
 }
 /* Solutions Section */
+
 .solutions-title {
-	padding: 10px 0;
-	margin: 10px 0;
+	padding: 18px 0;
 	border-bottom: 1px solid #ccc;
 	text-align: center;
+	display: block;
 }
 
 .section-solutions #portlets-below .cell {
 	width:298px;
 	padding: 0;
-    float: left;
 }
 
 .solution-column {
 	text-align: left;
-	margin-top: 0px;
+	margin-top: 6px;
 }
 
 .solution-column p {
@@ -954,12 +962,19 @@ body.section-blog #parent-fieldname-description {
 }
 
 .solution-column ul {
+	clear: both;
 	list-style: none;
 	padding: 12px;
 }
 
-.solution-image {
+.solutions-image-wrapper {
 	width: 100%;
+	padding: 20px 0 10px 0;
+}
+
+.solutions-image {
+	display: block;
+	margin: 0 auto;
 }
 
 /* Footer Section */
@@ -1105,11 +1120,20 @@ px      68    160    252    344    436    528    620    712    */
 	}
 	#header-logo {
 		float:left;
-		padding:14px 10px 10px 10px;
+		padding:14px 10px 0 10px;
 	}
 	
 	#list-nav a {  
 		padding: 0 12px;
+	}
+	
+	#slidesContainer {
+		width:768px;
+		height:320px;
+	  }
+	
+	.slide canvas {
+		left: 380px;
 	}
 	
 	.bigger, h3, #portlets-below dt.portletHeader {
@@ -1129,6 +1153,10 @@ px      68    160    252    344    436    528    620    712    */
 		width: 432px;
 	}
 	
+	.double-wide {
+		width: 482px;
+	}
+	
 	.triple {
 		width: 748px;
 	}
@@ -1136,9 +1164,13 @@ px      68    160    252    344    436    528    620    712    */
 	.half-width {
 		width: 348px;
 	}
+		
+	#news {
+		padding: 0 0 32px 0;
+	}
 	
 	.news-column {
-		width:200px;
+		width:180px;
 	}
 	
 	#logos li {
@@ -1155,6 +1187,15 @@ px      68    160    252    344    436    528    620    712    */
 	
 	.project-column {
 		width:254px;
+	}
+	
+	.solution-column {
+		width: 256px;
+	}
+	
+	.solutions-image {
+		width: 256px;
+		height: auto;
 	}
 }
 
@@ -1204,7 +1245,26 @@ px      68    160    252    */
 	}
 	
 	#list-nav a {  
-		padding: 0 12px;
+		padding: 0 6px;
+	}
+	
+	#slidesContainer {
+		width:320px;
+		height:460px;
+	}
+	
+	.slide canvas {
+		left: 18px;
+		top: 180px;
+		width: 280px;
+		height: 280px;
+	}
+	
+	#leftControl {
+		top:210px;
+	}
+	#rightControl {
+		top:210px;
 	}
 	
         li#portaltab-index_html {
@@ -1224,7 +1284,12 @@ px      68    160    252    */
 
 	.column {
 		margin: 12px 0;
+		padding-bottom: 0;
 		width: 280px;
+	}
+	
+	.column-title {
+		padding: 0 0 10px 0;
 	}
 	
 	.wide {
@@ -1243,8 +1308,13 @@ px      68    160    252    */
 		width: 280px;
 	}
 	
+	#news {
+		padding: 0px;
+		width:320px;
+	}
+	
 	.news-column {
-		margin-right: 0px;
+		margin: 0px;
 		width: 280px;
 	}
 	
@@ -1261,12 +1331,37 @@ px      68    160    252    */
 	}
 	
 	.project-column, .default-project, .plone-project, .python-project {
-		width:160px;
+		width:300px;
+		padding: 10px 0;
 	}
 	
 	.project-column img {
-		width: 160px;
+		width: 180px;
 		height: auto;
+	}
+	
+	.solution-column {
+		width: 300px;
+	}
+	
+	.solutions-image {
+		width: 300px;
+		height: auto;
+	}
+	
+	#footer-logo {
+		width: 100%;
+		padding: 20px 0;
+		text-align: center;
+	}
+	
+	#footer-nav {
+		float: none;
+		overflow: auto;
+		width: 100%;
+		display: block;
+		padding: 10px 0;
+		text-align: center;
 	}
 }
 
@@ -1280,26 +1375,228 @@ px      68    160    252    344    436    */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	
-	.section, .hr {
-		width: 436px;
+	body {
+		font: 12px/18px Helvetica, Arial, serif;
+	}
+
+	.big {
+		font-size: 14px;
+		line-height: 1.36em;
 	}
 	
-	#logo-wrapper {
-		width:436px;
-		margin:0 auto;
+	.special {
+		font-size: 14px;
+	}
+
+	#header, #search-bar, #image-slider, .section, #footer, .hr, #content-wrapper {
+		width: 480px;
 	}
 	
-	.logo {
-		width: 110px;
-		height: auto;
-		padding: 6px 10px;
-		margin: 6px;
+	#header-logo {
+		width: 100%;
+		text-align: center;
+		padding:14px 0 10px 0;
 	}
 	
+	#nav {
+		clear: both;
+		width:100%;
+		border-top: 1px solid #ddd;
+	}
+	
+	#list-nav li {  
+		padding: 12px 2px;
+	}
+	
+	#list-nav a {  
+		padding: 0 12px;
+	}
+	
+	#slidesContainer {
+		width:480px;
+		height:260px;
+	}
+	
+	.slide canvas {
+		left: 230px;
+		top: 10px;
+		width: 240px;
+		height: 240px;
+	}
+	
+	#leftControl {
+		top:120px;
+	}
+	#rightControl {
+		top:120px;
+	}
+	
+	.bigger, h3, #portlets-below dt.portletHeader {
+		font-size: 18px;
+		line-height: 22px;
+		padding: 16px;
+	}
+	
+	.big, h4, h2.tileHeadline {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
 	.column {
-		width: 436px;
-		margin:0;
-		clear:both;
+		padding: 12px 10px 12px 10px;
+		margin: 0px;
+		width: 460px;
 	}
 	
+	.wide {
+		width: 460px;
+	}
+	
+	.slide-text {
+		width: 200px;
+	}
+	
+	.double {
+		width: 460px;
+	}
+	
+	.triple {
+		width: 460px;
+	}
+	
+	.half-width {
+		width: 460px;
+	}
+	
+	#news {
+		width: 480px;
+		border-top: 1px solid #ccc;
+	}
+	
+	.news-column {
+		margin-right: 0px;
+		width: 440px;
+	}
+	
+	#logos li {
+		padding: 12px 24px;
+	}
+	
+	.we {
+		padding-left: 40px;
+	}
+
+	.collaborate {
+		padding-left: 64px;
+	}
+	
+	.project-column, .default-project, .plone-project, .python-project {
+		width:240px;
+		padding: 10px 0;
+	}
+	
+	.project-column img {
+		width: 160px;
+		height: auto;
+	}
+	
+	.solution-column {
+		width: 460px;
+	}
+	
+	.solutions-image {
+		width: 320px;
+		height: auto;
+	}
+	
+}
+
+/*		Hi-Res Layout.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout.
+------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 1439px) {
+	
+	body {
+		font: 14px/20px Helvetica, Arial, serif;
+	}
+	
+	h4, .big {
+		font-size: 20px;
+		line-height: 1.36em;
+	}
+	
+	.special {
+		font-size: 18px;
+	}
+	
+	#header, #search-bar, #image-slider, .section, #footer, .hr, #content-wrapper {
+		width: 1024px;
+	}
+	
+	#header-logo {
+		padding:24px 18px 0 22px;
+	}
+	
+	#list-nav li {
+		padding: 60px 0px;
+	}
+
+	#slidesContainer {
+		width: 1024px;
+		height: 380px;
+	}
+	
+	.slide {
+		width: 1024px;
+	}
+	
+	.slide canvas {
+		left: 590px;
+		top: 30px;
+	}
+	
+	.section-title {
+		padding: 36px 22px;
+	}
+	
+	.wide {
+		width: 440px;
+	}
+	
+	.double {
+		width: 504px;
+	}
+	
+	.double-wide {
+		width: 720px;
+	}
+	
+	.triple {
+		width: 748px;
+	}
+	
+	.half-width {
+		width: 476px;
+	}
+	
+	.project-column {
+		width: 252px;
+	}
+	
+	.solution-column {
+		width: 340px;
+	}
+	
+	#logos li {
+		padding: 24px 72px;
+		margin: 8px;
+	}
+	
+	h3, .bigger {
+		font-size: 24px;
+	}
 }

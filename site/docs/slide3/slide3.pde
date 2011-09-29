@@ -1,7 +1,6 @@
 /* @pjs transparent=true; */
 
 ArrayList<vPoint> points = new ArrayList<vPoint>();
-int counter = 0;
 float C = 65;
 float R2 = C*C;
 float S = 0.07;
@@ -12,6 +11,9 @@ float Cc = 130;
 float F = 0.7;
 float zDim = 400;
 
+float offsetX;
+float offsetY;
+
 float counter = 0;
 
 PVector cf = new PVector(0,0,0);
@@ -19,13 +21,15 @@ PVector cf = new PVector(0,0,0);
 vPoint centr;
 
 void setup() {
-  size(896, 320, P2D);
+  size(320, 320, P2D);
   background(0,0);
   frameRate(15);
   while (points.size() < 80) {
     points.add(new vPoint());
   }
-  centr = new vPoint(width*0.65, height*0.5, zDim*0.5);
+  centr = new vPoint(0,0,0);
+  offsetX = width*0.5;
+  offsetY = height*0.5;
   noLoop();
 }
 
@@ -35,7 +39,7 @@ void draw() {
   noStroke();
   for (vPoint p : points) {
     p.step();
-    ellipse(p.x, p.y, 3, 3);
+    ellipse(offsetX + p.x, offsetY + p.y, 3, 3);
   }
   stepSprings();
   constantForce();
@@ -55,9 +59,9 @@ class vPoint {
   
   
   public vPoint() {
-    x = px = width*0.65 + random(90);
-    y = py = height*0.5 + random(90) - 30;
-    z = pz = zDim*0.5 + random(90);
+    x = px = random(90) - 45;
+    y = py = random(90) - 45;
+    z = pz = random(90) - 45;
     fx = random(0.5) - 0.25;
     fy = random(0.5) - 0.25;
     fz = random(0.5) - 0.25;
@@ -113,7 +117,7 @@ void stepSprings() {
         float A2 = 0.4*R2;
         stroke(255, max(0, 255 * (x - A2)/(A1 - A2) ));
         strokeWeight(1);
-        line(p1.x,p1.y,p2.x,p2.y);
+        line(offsetX + p1.x,offsetY + p1.y,offsetX + p2.x,offsetY + p2.y);
       } 
     }
   }

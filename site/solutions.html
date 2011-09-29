@@ -17,7 +17,7 @@
 		<div id="header-wrapper">
 			<div id="header">
 				<div id="header-logo">
-					<img id="image-logo" src="images/logo.png"/>
+					<img class="image-logo" src="images/logo.png"/>
 				</div>
 				<div id="nav">
 					<ul id="list-nav">
@@ -39,9 +39,10 @@
 				<h3 class="section-title bigger gradient-vert">Complex problems need elegant solutions.</h3>
 				<div class="solutions-wrapper">
 					<div id="column-socialmedia" class="column solution-column">
+						<div class="solutions-image-wrapper dotted-bg">
+							<img class="solutions-image" id="col-1" src="images/solutions/column1.png"/>
+						</div>
 						<h3 class="dotted-bg solutions-title">Social Media</h3>
-						<img class="solutions-image" id="col-1" src="images/solutions/col-1.png"/>
-						<p class="medium">Powering up communities</p>
 						<ul class="big">
 							<li>
 								<a href="http://dev.unweb.me/solutions/integrate-with-popular-services" class="tile" title="Solve the puzzle of your fragmented social web presence, achieving higher visibility and easier updating. Take advantage of the APIs provided by popular services like Facebook, Twitter, Flickr etc, to put everything together.">
@@ -62,9 +63,10 @@
 						</ul>
 					</div>
 					<div id="column-business" class="column solution-column">
+						<div class="solutions-image-wrapper dotted-bg">
+							<img class="solutions-image" id="col-1" src="images/solutions/column2.png"/>
+						</div>
 						<h3 class="dotted-bg solutions-title">Business</h3>
-						<img class="solutions-image" id="col-1" src="images/solutions/col-2.png"/>
-						<p class="medium">Increase productivity and deliver quality services to your clients</p>
 						<ul class="big">
 							<li>
 								<a href="http://dev.unweb.me/solutions/document-and-workflow-management" class="tile" title="Get control over your documents and improve collaboration within your company. Clearly define the way everybody interacts with documents by assigning customized user roles, privileges, rules and workflows.">
@@ -84,9 +86,11 @@
 						</ul>
 					</div>
 					<div id="column-egov" class="column solution-column">
+						<div class="solutions-image-wrapper dotted-bg">
+							<img class="solutions-image" id="col-1" src="images/solutions/column3.png"/>
+						</div>
 						<h3 class="dotted-bg solutions-title">e-Government</h3>
-						<img class="solutions-image" id="col-1" src="images/solutions/col-3.png"/>
-						<p class="medium">Improve transparency, efficiency and citizen participation</p>
+						
 						<ul class="big">
 							<li>
 								<a href="http://dev.unweb.me/solutions/project-management" class="tile" title="Employ modern tools to better organize your workflow, make reporting easier and keep in touch with all involved actors. Your day to day operations will become a lot smoother and faster, even in large and demanding projects.">
@@ -111,7 +115,7 @@
 		<div id="footer-wrapper">
 			<div id="footer" class="section">
 				<div id="footer-logo">
-					<img id="image-logo" src="images/logo-w.png"/>
+					<img class="image-logo" src="images/logo-w.png"/>
 				</div>
 				<ul id="footer-nav">
 					<li><a class="category-link special" href="index.html">Home</a></li>
@@ -127,9 +131,9 @@
 		</div>
 		<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-
 		<script>window.jQuery || document.write('<script src="docs/js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 
+		<script type="text/javascript" charset="UTF-8" src="docs/js/libs/reflection.js"></script>
 		<script type="text/javascript" src="docs/js/solutions.js"></script>
         <script>
 	            $("#logos ul li").hover(function() { //On hover...
