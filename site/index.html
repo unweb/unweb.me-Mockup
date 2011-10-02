@@ -150,17 +150,65 @@
 		</div>
 		<div id="footer-wrapper">
 			<div id="footer">
-				<div id="footer-logo">
-					<img class="image-logo" src="images/logo-w.png"/>
+				<div class="footer-section">
+					<div id="footer-logo">
+						<img class="image-logo" src="images/logo-w.png"/>
+					</div>
+					<ul id="footer-nav">
+						<li class="selected"><a class="category-link special" href="index.html">Home</a></li>
+						<li><a class="category-link special" href="about.html">About</a></li>
+						<li><a class="category-link special" href="solutions.html">Solutions</a></li>
+						<li><a class="category-link special" href="projects.html">Projects</a></li>
+						<li><a class="category-link special" href="blog.html">Blog</a></li>
+					</ul>
 				</div>
-				<ul id="footer-nav">
-					<li class="selected"><a class="category-link special" href="index.html">Home</a></li>
-                    <li><a class="category-link special" href="about.html">About</a></li>
-					<li><a class="category-link special" href="solutions.html">Solutions</a></li>
-					<li><a class="category-link special" href="projects.html">Projects</a></li>
-					<li><a class="category-link special" href="blog.html">Blog</a></li>
-				</ul>
-				<div id="footer-disclaimer">
+				<div id="footer-details" class="footer-section">
+					<img id="footer-map" src="images/map.png" />
+					<div class="footer-detail">
+						<ul>
+							<li>unweb.me</li>
+							<li><br /></li>
+							<li>Street No</li>
+							<li>Postcode City</li>
+							<li>Country</li>
+							<li>Phone etc.</li>
+						</ul>
+					</div>
+					<div class="footer-detail">
+						<ul>
+							<li><br /></li>
+							<li><br /></li>
+							<li>Street No</li>
+							<li>Postcode City</li>
+							<li>Country</li>
+							<li>Phone etc.</li>
+						</ul>
+					</div>
+					<div class="footer-detail">
+						<ul>
+							<li><br /></li>
+							<li><br /></li>
+							<li>Street No</li>
+							<li>Postcode City</li>
+							<li>Country</li>
+							<li>Phone etc.</li>
+						</ul>
+					</div>
+				</div>
+				<div id="footer-contactwrapper" class="footer-section">
+					<div id="footer-expand">
+					<script type="text/javascript">document.getElementById("footer-expand").style.display = 'none';</script>
+						<div id="footer-textcontact">
+							Be sure to keep in touch with us!
+						</div>
+						<textarea id="footer-textarea"></textarea>
+					</div>
+					<div id="footer-click">
+						Contact
+					</div>
+				</div>
+				<div id="footer-disclaimer" class="footer-section small-special">
+					Disclaimer things
 				</div>
 			</div>
 		</div>
@@ -172,11 +220,7 @@
 		<script src="docs/js/libs/processing-1.2.3.min.js"></script>  
 		<script type="text/javascript" src="docs/js/frontpage.js"></script>
 
-
-
 	</body>
-               <script type="text/javascript" charset="UTF-8" src="docs/js/libs/reflection.js"></script>
-                <script type="text/javascript" src="docs/js/projects.js"></script>
 
         <script>
 	            $("#logos ul li").hover(function() { //On hover...

@@ -459,7 +459,6 @@ body.section-about-us ul.medium {
 }
 
 .column {
-    color: #444444;
     float: left;
     padding: 0 18px 32px;
     width: 228px;
@@ -760,9 +759,11 @@ dl.portletTagCloudPortlet a{
 
 #blog .post-properties {
 	background: url("../../images/background-1.gif") repeat 0 0;
-	padding: 4px 0;
+	padding: 6px 0 6px 10px;
+	margin-left: 10px;
     margin-top:1em;
     float:right;
+	border-left: 1px solid #ccc;
 }
 
 #blog .post-date, #blog .post-tags {
@@ -987,20 +988,31 @@ body.section-blog #parent-fieldname-description {
 
 #footer-logo {
 	float: left;
-	padding:30px 10px;
+	padding:20px 10px;
 }
 
 /* Footer Navigation */
 
+.footer-section {
+	width: 100%;
+	overflow: auto;
+	border-bottom: 1px solid #b0dcdf;
+	padding: 20px 0;
+	color: #efefef;
+}
+
+.footer-section ul {
+	list-style: none;
+}
+
 #footer-nav {
 	float:right;
-	padding: 60px 0;
+	padding: 50px 0;
 }
 
 #footer-nav li {
 	display:block;
 	float:left;
-	list-style-type: none;
 	padding: 0 14px;
 	margin: 0;
 	text-transform: lowercase;
@@ -1020,6 +1032,44 @@ body.section-blog #parent-fieldname-description {
 
 #footer-nav li.selected {
 	color:#fff;
+}
+
+#footer-details {
+	clear: both;
+	
+}
+
+.footer-detail {
+	float: right;
+	width: 236px;
+	text-align: right;
+}
+
+#footer-expand {
+	width: 600px;
+	overflow: auto;
+}
+
+#footer-textcontact {
+	float: left;
+	width: 200px;
+	padding-right: 18px;
+}
+
+#footer-textarea {
+	width: 376px;
+	height: 160px;
+	background: none;
+	border: 1px solid #eee;
+	float: left;
+}
+
+#footer-click {
+	padding-left: 24px;
+	background: url('../../images/contact.png') left center no-repeat;
+	cursor: pointer;
+	float: right;
+	vertical-align: bottom;
 }
 
 #footer-disclaimer {
@@ -1196,6 +1246,10 @@ px      68    160    252    344    436    528    620    712    */
 		width: 256px;
 		height: auto;
 	}
+	
+	.footer-detail {
+		width: 186px;
+	}
 }
 
 
@@ -1358,6 +1412,15 @@ px      68    160    252    */
 		padding: 10px 0;
 		text-align: center;
 	}
+	
+	.footer-detail {
+		width: 92px;
+	}
+	
+	#footer-map {
+		display: block;
+		clear:both;
+	}
 }
 
 /*		Wide Mobile Layout: 480px.
@@ -1504,6 +1567,10 @@ px      68    160    252    344    436    */
 		height: auto;
 	}
 	
+	#footer-map {
+		clear: none;
+		float: left;
+	}
 }
 
 /*		Hi-Res Layout.
@@ -1593,5 +1660,10 @@ px      68    160    252    344    436    */
 	
 	h3, .bigger {
 		font-size: 24px;
+	}
+	
+	#footer-map {
+		clear: none;
+		float: left;
 	}
 }
