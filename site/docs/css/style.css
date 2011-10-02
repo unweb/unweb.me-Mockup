@@ -469,6 +469,7 @@ body.section-about-us ul.medium {
 	padding: 20px 25px 10px 33px;
         float:left;
         color: #444;
+        height: 268px;
 }
 
 .tileImage canvas {
@@ -926,7 +927,7 @@ body.section-blog #parent-fieldname-description {
 }
 
 #content img.tileImage, #content div.newsImageContainer {
-    margin: 0 55px 10px;
+    margin: 0 0px 10px;
 }
 
 #content-core li, dl.portlet li, #portal-column-two li {
@@ -1118,8 +1119,8 @@ body.section-blog #parent-fieldname-description {
 	background: url("../../images/dimo.png") no-repeat scroll 0 0 transparent;
 }
 
-#people .column p.chris {
-	background: url("../../images/chris.png") no-repeat scroll 0 0 transparent;
+#people .column p.cpsaltis {
+	background: url("../../images/cpsaltis.png") no-repeat scroll 0 0 transparent;
 }
 
 #people .column p.mike {
@@ -1167,6 +1168,7 @@ px      68    160    252    344    436    528    620    712    */
 	#header, #search-bar, #image-slider, .section, #footer, .hr, #content-wrapper {
 		width: 768px;
 	}
+
 	#header-logo {
 		float:left;
 		padding:14px 10px 0 10px;
@@ -1277,7 +1279,7 @@ px      68    160    252    */
 		font-size: 12px;
 	}
 
-	#header, #search-bar, #image-slider, .section, #footer, .hr, #content-wrapper {
+	#header, #search-bar, #image-slider, .section, #footer, .hr, #content-wrapper, #content-core {
 		width: 320px;
 	}
 	
@@ -1287,6 +1289,16 @@ px      68    160    252    */
 		padding:14px 0 10px 0;
 	}
 	
+        #footer-nav {
+                width: 100px;
+        }
+        
+        #footer-logo {
+                width: 50px;
+		padding: 50px 0;
+		text-align: center;
+        }
+
 	#nav {
 		clear: both;
 		width:100%;
@@ -1398,12 +1410,6 @@ px      68    160    252    */
 		height: auto;
 	}
 	
-	#footer-logo {
-		width: 100%;
-		padding: 20px 0;
-		text-align: center;
-	}
-	
 	#footer-nav {
 		float: none;
 		overflow: auto;
@@ -1446,10 +1452,18 @@ px      68    160    252    344    436    */
 		font-size: 14px;
 	}
 
-	#header, #search-bar, #image-slider, .section, #footer, .hr, #content-wrapper {
+	#header, #search-bar, #image-slider, .section, #footer, .hr, #content-wrapper, #content-core {
 		width: 480px;
 	}
 	
+	#footer-nav {
+		width: 100px;
+	}
+
+	#footer-logo {
+		width: 390px;
+	}
+
 	#header-logo {
 		width: 100%;
 		text-align: center;
