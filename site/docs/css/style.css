@@ -1067,6 +1067,10 @@ body.section-blog #parent-fieldname-description {
 	background: url("../../images/provetza.png") no-repeat scroll 0 0 transparent;
 }
 
+#people .column p.mike {
+        background: url("../../images/mike.png") no-repeat scroll 0 0 transparent;
+}
+
 #people .column p.dimo {
 	background: url("../../images/dimo.png") no-repeat scroll 0 0 transparent;
 }
@@ -1075,8 +1079,17 @@ body.section-blog #parent-fieldname-description {
 	background: url("../../images/cpsaltis.png") no-repeat scroll 0 0 transparent;
 }
 
-#people .column p.mike {
-	background: url("../../images/mike.png") no-repeat scroll 0 0 transparent;
+#people .column p.evi {
+	background: url("../../images/evi.png") no-repeat scroll 0 0 transparent;
+}
+
+#people .column p.yconst {
+        background: url("../../images/yconst.png") no-repeat scroll 0 0 transparent;
+}
+
+.qtip {
+	font-size:14px;
+	line-height: 18px;
 }
 
 /*
