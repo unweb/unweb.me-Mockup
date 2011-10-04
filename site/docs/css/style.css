@@ -1037,46 +1037,11 @@ body.section-blog #parent-fieldname-description {
 
 #footer-details {
 	clear: both;
-	
 }
 
 .footer-detail {
 	float: right;
-	width: 236px;
-	text-align: right;
-}
-
-#footer-expand {
-	width: 600px;
-	overflow: auto;
-}
-
-#footer-textcontact {
-	float: left;
-	width: 200px;
-	padding-right: 18px;
-}
-
-#footer-textarea {
-	width: 376px;
-	height: 160px;
-	background: none;
-	border: 1px solid #eee;
-	float: left;
-}
-
-#footer-click {
-	padding-left: 24px;
-	background: url('../../images/contact.png') left center no-repeat;
-	cursor: pointer;
-	float: right;
-	vertical-align: bottom;
-}
-
-#footer-disclaimer {
-	clear:both;
-	color:#eee;
-	padding:4px 10px;
+	width: 356px;
 }
 
 .searchSection, #search-bar label, #search-bar .searchButton {display:none;}
@@ -1422,11 +1387,6 @@ px      68    160    252    */
 	.footer-detail {
 		width: 92px;
 	}
-	
-	#footer-map {
-		display: block;
-		clear:both;
-	}
 }
 
 /*		Wide Mobile Layout: 480px.
@@ -1580,11 +1540,6 @@ px      68    160    252    344    436    */
 		width: 320px;
 		height: auto;
 	}
-	
-	#footer-map {
-		clear: none;
-		float: left;
-	}
 }
 
 /*		Hi-Res Layout.
@@ -1674,10 +1629,5 @@ px      68    160    252    344    436    */
 	
 	h3, .bigger {
 		font-size: 24px;
-	}
-	
-	#footer-map {
-		clear: none;
-		float: left;
 	}
 }
