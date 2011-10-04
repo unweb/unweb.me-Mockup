@@ -1044,6 +1044,19 @@ body.section-blog #parent-fieldname-description {
 	width: 356px;
 }
 
+.footer-detail p {
+    margin-top:15px;
+    margin-bottom:25px;
+}
+
+.footer-detail ul {
+    margin-bottom:75px;
+}
+
+.footer-detail img {
+    margin-top:17px;
+}
+
 .searchSection, #search-bar label, #search-bar .searchButton {display:none;}
 
 .LSBox { float:right; }
