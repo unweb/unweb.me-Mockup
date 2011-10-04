@@ -1,8 +1,4 @@
 $(document).ready(function(){
-  
-//  $('.project-column').find('img').reflect();
-  $('.visualIEFloatFix').find('img').reflect();
-  
   // Expand contact section in footer
   $('#footer-click').click(function() {
     if (!$('#footer-expand').is(':visible')) {

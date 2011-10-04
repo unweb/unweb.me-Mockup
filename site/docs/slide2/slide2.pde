@@ -2,11 +2,13 @@
 
 ArrayList<graphLine> points = new ArrayList<graphLine>();
 
+float Ht = (float)height * 0.6f;
+
 void setup() {
   size(320, 320, P2D);
   background(0,0);
   frameRate(16);
-  noLoop();
+
 }
 
 void draw() {
@@ -35,12 +37,19 @@ class graphLine {
     init();
   }
   void init() {
-    curX = 0;
-    curY = height * 0.2 + random( height * 0.6);
+    float ipos = random(width + Ht);
+    if (ipos < Ht) {
+      curX = 0;
+      curY = height * 0.2 + ipos;
+      print("GG");
+    } else {
+      curX = ipos - Ht;
+      curY = height * 0.2 + Ht;
+    }
     uX = 1 + random(6);
     uY = 0;
     uY -= ((int)random(3) - 1)*(curX * 0.01 + 1);
-    uY = min(2, max(-2, uY));
+    uY = min(0, max(-2, uY));
     localPoints = new ArrayList<PVector>();
     localPoints.add(new PVector(curX, curY));
     opacity = 250;
@@ -72,7 +81,7 @@ class graphLine {
     for (PVector p : localPoints) {
       vertex(p.x,p.y);
     }
-    vertex(curX, curY, 0);
+    vertex(curX, curY);
     endShape();
   }
 }
