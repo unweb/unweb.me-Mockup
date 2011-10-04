@@ -6,6 +6,7 @@
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+		<link rel="stylesheet" media="all" href="docs/css/jquery.qtip.min.css"/>
 		<link rel="stylesheet" media="all" href="docs/css/style.css"/>
 		<link rel="stylesheet" media="all" href="docs/maven/fonts.css"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -143,7 +144,7 @@
 				    <li><a href="/projects/the-childrens-ombudsman" title="The Greek Ombudsman" class="logo"><span><img src="images/logos-bwc/client-3.png" /></span></a></li>
 				    <li><a href="/projects/plumi" title="Engage Media" class="logo"><span><img src="images/logos-bwc/client-5.png" /></span></a></li>
 				    <li><a href="/projects/openfsm" title="World Social Forum" class="logo"><span><img src="images/logos-bwc/client-4.png" /></span></a></li>
-				    <li><a href="/projects/sto-kokkino" title="ΣΤΟ ΚΟΚΚΙΝΟ 105.5 " class="logo"><span><img src="images/logos-bwc/client-7.png" /></span></a></li>
+				    <li><a href="/projects/sto-kokkino" title="Sto kokkino 105.5FM " class="logo"><span><img src="images/logos-bwc/client-7.png" /></span></a></li>
 				    <li><a href="/projects/invision-images.com" title="Invision Images photo agency" class="logo"><span><img src="images/logos-bwc/client-8.png" /></span></a></li>
                 </ul>
 			</div>
@@ -176,9 +177,51 @@
 
 	</body>
                <script type="text/javascript" charset="UTF-8" src="docs/js/libs/reflection.js"></script>
-                <script type="text/javascript" src="docs/js/projects.js"></script>
+               <script type="text/javascript" src="docs/js/libs/jquery.qtip.min.js"></script>
 
         <script>
+		$(document).ready(function(){
+			$('body.section-projects img.tileImage').reflect();
+			$(".tileItem").qtip({
+                                content: {
+                                        text: function(api) {return $(this).find('.tileBody').html();}
+                                },
+   				position: {
+				     	my: 'bottom center',  // Position my top left...
+				      	at: 'top center', // at the bottom right of...
+   				},
+   				style: {
+			      		classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
+   				}
+                        });
+                        $(".projects-wrapper .column").qtip({
+                                content: {
+                                        text: function(api) {return $(this).parent().attr('title');}
+                                },
+                                position: {
+                                        my: 'bottom center',  // Position my top left...
+                                        at: 'top center', // at the bottom right of...
+                                },
+                                style: {
+                                        classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
+                                }
+                        });
+
+			$("#logos a.logo").qtip({
+                                content: {
+                                        text: function(api) {return $(this).attr('title');}
+                                },
+                                position: {
+                                        my: 'bottom center',  // Position my top left...
+                                        at: 'top center', // at the bottom right of...
+                                },
+                                style: {
+                                        classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
+                                }
+			});
+			//$("div.projects-wrapper a[title]").tooltip();
+		});
+
 	            $("#logos ul li").hover(function() { //On hover...
 
 		            var thumbOver = $(this).find("img").attr("src"); //Get image url and assign it to 'thumbOver'
@@ -194,5 +237,51 @@
 		            //Fade the image to full opacity 
 		            $(this).find("span").stop().fadeTo('normal', 1).show();
 	            });
+
+                $("body.section-projects .tileItem").hover(function() {
+			return false;
+                        $(this).css({'z-index' : '19000'}); /*Add a higher z-index value so this image stays on top*/ 
+			$(this).find("img").unreflect();
+                        $(this).find("img").css({'z-index' : '999999000'}); /*Add a higher z-index value so this image stays on top*/ 
+			if ($(this).find("img").attr && $(this).find('img').attr('src').indexOf('preview') == -1) {
+				$(this).find('img').attr('src', $(this).find('img').attr('src').replace('thumb','preview')); // $(this).find('img').attr('src').replace('thumb','preview'));
+			}
+                        $(this).find('img').addClass("hover").stop()
+                                .animate({
+                                //        marginTop: '-110px', /* The next 4 lines will vertically align this image */ 
+                                        marginRight: '-100px',
+                                //        top: '50%',
+                                //        left: '50%',
+                                        width: '500px', /* Set new width */
+                                        height: '400px', /* Set new height */
+                                //        padding: '20px'
+                                }, 200,
+				complete=function(){
+				}
+				); /* this value of "200" is the speed of how fast/slow this hover animates */
+
+                } , function() {
+			return false;
+                        $(this).css({'z-index' : '-1'}); /* Set z-index back to 0 */
+                        $(this).find("img").css({'z-index' : '-1'}); /* Set z-index back to 0 */
+                        $(this).find('img').removeClass("hover").stop()  /* Remove the "hover" class , then stop animation queue buildup*/
+                                .animate({
+                                 //       marginTop: '0', /* Set alignment back to default */
+                                        marginRight: '0px',
+                                 //       top: '0',
+                                 //       left: '0',
+                                        width: '225px', /* Set width back to default */
+                                        height: '180px', /* Set height back to default */
+                                }, 400,
+				complete = function() {
+					if ($(this).attr('src').indexOf('thumb') == -1) {
+						$(this).attr('src', $(this).attr('src').replace('preview','thumb')); // $(this).find('img').attr('src').replace('thumb','preview'));
+                        		}
+					$(this).reflect();
+
+				}
+				);
+                });
+
         </script>
 </html>
