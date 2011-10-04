@@ -74,6 +74,19 @@
 
     <!-- section solutions -->
     <prepend content='//*[@id="portal-column-two"]' theme='//*[@id="content-wrapper"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-solutions ')])" />
+    <replace css:content='body.section-solutions #portlets-below dd.portletItem'>
+	<dd class="portletItem">
+	<xsl:for-each css:select="a">
+	<a class="tile">
+                <xsl:attribute name="href">
+                        <xsl:value-of select="@href" />
+                </xsl:attribute>
+		<h4><xsl:copy-of select="text()" /></h4>
+		<p> <xsl:value-of select="@title" /> </p>
+        </a>
+	</xsl:for-each>
+	</dd>
+    </replace>
 
 
    <!-- projects .portlet-collection-open-source -->
@@ -87,6 +100,10 @@
 	<div class="projects-wrapper">
 	<xsl:for-each css:select="a">
     	<a href="">
+                <xsl:attribute name="title">
+                        <xsl:value-of select="@title" />
+                </xsl:attribute>
+
                 <xsl:attribute name="href">
 			<xsl:value-of select="@href" />
 		</xsl:attribute>
