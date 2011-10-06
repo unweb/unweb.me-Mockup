@@ -92,9 +92,11 @@ $(document).ready(function(){
       // Disable invisible sketches.
       $('.processing-canvas').each(function() {
         var inst = Processing.getInstanceById($(this).attr('id'));
-        inst.noLoop();
+        if (inst != undefined)  { inst.noLoop(); }
       });
-      Processing.getInstanceById($(slides[currentPosition]).children('canvas').attr('id')).loop();
+      try {
+        Processing.getInstanceById($(slides[currentPosition]).children('canvas').attr('id')).loop();
+      } catch(err) {}
     }
     
     // Refresh timeout.
@@ -108,7 +110,9 @@ $(document).ready(function(){
     
     // Bind to resize event
     $(window).resize(function() {
-      clearTimeout(timeout);
+      try{
+      	clearTimeout(timeout);
+      } catch (err) {}
       resizeTimeout = setTimeout(function() {
         slideWidth = slides.outerWidth(true);
       }, 200);

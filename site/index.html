@@ -184,7 +184,7 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="docs/js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 		
-		<script src="docs/js/libs/processing-1.2.3.min.js"></script>  
+		<script src="docs/js/libs/processing-1.3.5.min.js"></script>  
 		<script type="text/javascript" src="docs/js/frontpage.js"></script>
 
 	</body>
@@ -208,6 +208,18 @@
                         $(".projects-wrapper .column").qtip({
                                 content: {
                                         text: function(api) {return $(this).parent().attr('title');}
+                                },
+                                position: {
+                                        my: 'bottom center',  // Position my top left...
+                                        at: 'top center', // at the bottom right of...
+                                },
+                                style: {
+                                        classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
+                                }
+                        });
+			$(".section-solutions #portlets-below .cell a").qtip({
+                                content: {
+                                        text: function(api) {return $(this).attr('title');}
                                 },
                                 position: {
                                         my: 'bottom center',  // Position my top left...
@@ -248,51 +260,6 @@
 		            //Fade the image to full opacity 
 		            $(this).find("span").stop().fadeTo('normal', 1).show();
 	            });
-
-                $("body.section-projects .tileItem").hover(function() {
-			return false;
-                        $(this).css({'z-index' : '19000'}); /*Add a higher z-index value so this image stays on top*/ 
-			$(this).find("img").unreflect();
-                        $(this).find("img").css({'z-index' : '999999000'}); /*Add a higher z-index value so this image stays on top*/ 
-			if ($(this).find("img").attr && $(this).find('img').attr('src').indexOf('preview') == -1) {
-				$(this).find('img').attr('src', $(this).find('img').attr('src').replace('thumb','preview')); // $(this).find('img').attr('src').replace('thumb','preview'));
-			}
-                        $(this).find('img').addClass("hover").stop()
-                                .animate({
-                                //        marginTop: '-110px', /* The next 4 lines will vertically align this image */ 
-                                        marginRight: '-100px',
-                                //        top: '50%',
-                                //        left: '50%',
-                                        width: '500px', /* Set new width */
-                                        height: '400px', /* Set new height */
-                                //        padding: '20px'
-                                }, 200,
-				complete=function(){
-				}
-				); /* this value of "200" is the speed of how fast/slow this hover animates */
-
-                } , function() {
-			return false;
-                        $(this).css({'z-index' : '-1'}); /* Set z-index back to 0 */
-                        $(this).find("img").css({'z-index' : '-1'}); /* Set z-index back to 0 */
-                        $(this).find('img').removeClass("hover").stop()  /* Remove the "hover" class , then stop animation queue buildup*/
-                                .animate({
-                                 //       marginTop: '0', /* Set alignment back to default */
-                                        marginRight: '0px',
-                                 //       top: '0',
-                                 //       left: '0',
-                                        width: '225px', /* Set width back to default */
-                                        height: '180px', /* Set height back to default */
-                                }, 400,
-				complete = function() {
-					if ($(this).attr('src').indexOf('thumb') == -1) {
-						$(this).attr('src', $(this).attr('src').replace('preview','thumb')); // $(this).find('img').attr('src').replace('thumb','preview'));
-                        		}
-					$(this).reflect();
-
-				}
-				);
-                });
 
         </script>
 </html>

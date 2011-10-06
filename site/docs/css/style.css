@@ -55,7 +55,7 @@ a img {border: 0;}
 	line-height: 26px;
 }
 
-.big, h4, h2.tileHeadline {
+.big, h4, h2.tileHeadline, #content div.documentDescription #parent-fieldname-description {
 	font-family: 'Conv_MavenPro-Regular', Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	font-size: 18px;
@@ -446,6 +446,7 @@ body.section-about-us #content-core {
 body.section-about-us .column {
 	width:380px;
 	margin: 10px 0px 10px 15px;
+	padding: 0 18px 18px;
 }
 
 body.section-about-us h4.column-title {
@@ -510,7 +511,7 @@ a:link, a:visited, #content-core a:link, #content-core a:visited {
 }
 
 #content-core {
-    width: 596px;
+    overflow: hidden;
 /*    min-height: 603px; */
 }
 
@@ -530,6 +531,7 @@ dl.portlet dt.portletHeader {
 #portal-column-two {
     float: right;
     margin-top: 82px;
+    margin-left: 40px;
     right: 0;
     width: 228px;
     background:transparent url(../../images/background-3.gif) repeat-y 0 0;
@@ -741,16 +743,16 @@ dl.portletTagCloudPortlet a{
 
 /* Blog Section */
 
-#blog {
+.section-blog {
 	line-height: 1.46em;
 }
 
-#blog a {
+.section-blog a {
 	color:#4080d4;
 	text-decoration: none;
 }
 
-#blog a:hover {
+.section-blog a:hover {
 	text-decoration: underline;
 }
 
@@ -760,7 +762,7 @@ dl.portletTagCloudPortlet a{
 	border-bottom: 1px solid #cfcfcf;
 }
 
-#blog .post-properties {
+.section-blog .post-properties {
 	background: url("../../images/background-1.gif") repeat 0 0;
 	padding: 6px 0 6px 10px;
 	margin-left: 10px;
@@ -769,17 +771,17 @@ dl.portletTagCloudPortlet a{
 	border-left: 1px solid #ccc;
 }
 
-#blog .post-date, #blog .post-tags {
+.section-blog .post-date, .section-blog .post-tags {
     display: block;
     height: 16px;
     padding: 6px 24px;
 }
 
-#blog .post-date {
+.section-blog .post-date {
 	background: url('../../images/calendar_small.png') no-repeat 3px 5px;
 }
 
-#blog .post-tags {
+.section-blog .post-tags {
 	background: url('../../images/tag_small.png') no-repeat 3px 5px;
 }
 
@@ -921,7 +923,7 @@ body.section-projects .tileItem .tileBody, body.section-projects .tileItem .tile
     margin-left: 0;
     padding-top: 20px;
     padding-bottom: 10px;
-    width: 596px;
+    width: auto;
 }
 
 body.section-blog #parent-fieldname-description {
@@ -953,8 +955,9 @@ body.section-blog #parent-fieldname-description {
 }
 
 .section-solutions #portlets-below .cell {
-	width:298px;
-	padding: 0;
+	width: 25%;
+	padding: 4%;
+	float: left;
 }
 
 .solution-column {
@@ -1094,6 +1097,7 @@ body.section-blog #parent-fieldname-description {
 
 #viewlet-below-content {
     clear: both;
+    padding-bottom: 1px;
 }
 
 #people a:link, #people a:visited {
@@ -1134,21 +1138,30 @@ body.section-blog #parent-fieldname-description {
 	line-height: 18px;
 }
 
-/*
-body.section-solutions #viewlet-below-content {
-    width: 228px;
-    background: url("../../images/background-3.gif") repeat-y scroll 0 0 transparent;
-    padding: 0 18px 5px;
-    position: absolute;
-    right: 0;
-    top: 84px;
+
+body.section-solutions #content-wrapper {
+	min-height: 360px;
+	padding-bottom: 50px;
 }
-*/
+
 
 #category {
-    width: 596px;
+    width: auto;
 }
 
+body.section-state-of-the-art-information-systems #content-core {
+	width: auto;
+	overflow: visible;
+}
+
+#content-core img {
+	max-width: 100%;
+}	
+
+div.documentDescription #parent-fieldname-description {
+	font-size: 20px;
+	line-height: 1.36em;
+}
 /*		Tablet Layout: 768px.
 		Gutters: 24px.
 		Outer margins: 28px.
@@ -1182,7 +1195,7 @@ px      68    160    252    344    436    528    620    712    */
 	}
 	
 	#list-nav a {  
-		padding: 0 12px;
+		padding: 60px 12px;
 	}
 	
 	#slidesContainer {
@@ -1255,6 +1268,11 @@ px      68    160    252    344    436    528    620    712    */
 	.footer-detail {
 		width: 297px;
 	}
+
+	body.section-about-us .column {
+    		margin: 10px 10px 10px 0;
+    		width: 320px;
+	}
 }
 
 
@@ -1282,7 +1300,7 @@ px      68    160    252    */
 		font-size: 12px;
 	}
 
-	#header, #search-bar, #image-slider, .section, #footer, .hr, #content-wrapper, #content-core {
+	#header, #search-bar, #image-slider, .section, #footer, .hr, #content-wrapper {
 		width: 320px;
 	}
 	
@@ -1444,6 +1462,25 @@ px      68    160    252    */
 	.twtr-tweets {
    	 	background-color: transparent;
 	}
+
+	#portal-column-two {
+		display:none;
+	}
+
+	#content-core {
+		width: auto;
+	}
+
+        body.section-about-us .column {
+                margin: 10px;
+                width: 260px;
+        }
+
+	body.section-solutions #portlets-below dt.portletHeader {
+		padding: 0;
+		font-size: 14px;
+	}
+
 }
 
 /*		Wide Mobile Layout: 480px.
@@ -1518,7 +1555,7 @@ px      68    160    252    344    436    */
 	}
 	
 	#list-nav a {  
-		padding: 0 12px;
+		padding: 60px 12px;
 	}
 	
 	#slidesContainer {
@@ -1630,6 +1667,20 @@ px      68    160    252    344    436    */
                 background-color: transparent;
         }
 
+        body.section-projects .tileItem {
+                margin: 32px 70px 16px;
+        }
+
+        #content-core {
+        	width: auto;
+	}
+
+	#portal-column-two {
+		display: none;
+	}
+
+
+
 }
 
 /*		Hi-Res Layout.
@@ -1731,4 +1782,19 @@ px      68    160    252    344    436    */
         	width: 325px;
 	}
 
+	body.section-projects .tileItem {
+		margin: 32px 20px 16px;
+	}
+
+	#content-core {
+		width: 700px;
+	}
+
+	body.section-about-us #content-core {
+                width: auto;
+        }
+
+	body.section-about-us .column {
+    		width: 420px;
+	}
 }

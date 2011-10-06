@@ -74,7 +74,7 @@
 
     <!-- section solutions -->
     <prepend content='//*[@id="portal-column-two"]' theme='//*[@id="content-wrapper"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-solutions ')])" />
-    <replace css:content='body.section-solutions #portlets-below dd.portletItem'>
+    <!--replace css:content='body.section-solutions #portlets-below dd.portletItem'>
 	<dd class="portletItem">
 	<xsl:for-each css:select="a">
 	<a class="tile">
@@ -86,7 +86,7 @@
         </a>
 	</xsl:for-each>
 	</dd>
-    </replace>
+    </replace-->
 
 
    <!-- projects .portlet-collection-open-source -->
