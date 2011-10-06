@@ -927,7 +927,9 @@ body.section-blog #parent-fieldname-description {
 }
 
 #content img.tileImage, #content div.newsImageContainer {
-    margin: 0 0px 10px;
+    margin: 0;
+    float: none;
+    text-align: center;
 }
 
 #content-core li, dl.portlet li, #portal-column-two li {
@@ -1037,46 +1039,24 @@ body.section-blog #parent-fieldname-description {
 
 #footer-details {
 	clear: both;
-	
 }
 
 .footer-detail {
 	float: right;
-	width: 236px;
-	text-align: right;
+	width: 356px;
 }
 
-#footer-expand {
-	width: 600px;
-	overflow: auto;
+.footer-detail p {
+    margin-top:15px;
+    margin-bottom:25px;
 }
 
-#footer-textcontact {
-	float: left;
-	width: 200px;
-	padding-right: 18px;
+.footer-detail ul {
+    margin-bottom:75px;
 }
 
-#footer-textarea {
-	width: 376px;
-	height: 160px;
-	background: none;
-	border: 1px solid #eee;
-	float: left;
-}
-
-#footer-click {
-	padding-left: 24px;
-	background: url('../../images/contact.png') left center no-repeat;
-	cursor: pointer;
-	float: right;
-	vertical-align: bottom;
-}
-
-#footer-disclaimer {
-	clear:both;
-	color:#eee;
-	padding:4px 10px;
+.footer-detail img {
+    margin-top:17px;
 }
 
 .searchSection, #search-bar label, #search-bar .searchButton {display:none;}
@@ -1115,6 +1095,10 @@ body.section-blog #parent-fieldname-description {
 	background: url("../../images/provetza.png") no-repeat scroll 0 0 transparent;
 }
 
+#people .column p.mike {
+        background: url("../../images/mike.png") no-repeat scroll 0 0 transparent;
+}
+
 #people .column p.dimo {
 	background: url("../../images/dimo.png") no-repeat scroll 0 0 transparent;
 }
@@ -1123,8 +1107,17 @@ body.section-blog #parent-fieldname-description {
 	background: url("../../images/cpsaltis.png") no-repeat scroll 0 0 transparent;
 }
 
-#people .column p.mike {
-	background: url("../../images/mike.png") no-repeat scroll 0 0 transparent;
+#people .column p.evi {
+	background: url("../../images/evi.png") no-repeat scroll 0 0 transparent;
+}
+
+#people .column p.yconst {
+        background: url("../../images/yconst.png") no-repeat scroll 0 0 transparent;
+}
+
+.qtip {
+	font-size:14px;
+	line-height: 18px;
 }
 
 /*
@@ -1422,11 +1415,6 @@ px      68    160    252    */
 	.footer-detail {
 		width: 92px;
 	}
-	
-	#footer-map {
-		display: block;
-		clear:both;
-	}
 }
 
 /*		Wide Mobile Layout: 480px.
@@ -1580,11 +1568,6 @@ px      68    160    252    344    436    */
 		width: 320px;
 		height: auto;
 	}
-	
-	#footer-map {
-		clear: none;
-		float: left;
-	}
 }
 
 /*		Hi-Res Layout.
@@ -1674,10 +1657,5 @@ px      68    160    252    344    436    */
 	
 	h3, .bigger {
 		font-size: 24px;
-	}
-	
-	#footer-map {
-		clear: none;
-		float: left;
 	}
 }
