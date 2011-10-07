@@ -184,7 +184,7 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="docs/js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 		
-		<script src="docs/js/libs/processing-1.3.5.min.js"></script>  
+		<script src="docs/js/libs/processing-1.3.5.js"></script>  
 		<script type="text/javascript" src="docs/js/frontpage.js"></script>
 
 	</body>
@@ -242,7 +242,13 @@
                                         classes: 'ui-tooltip-light ui-tooltip-shadow ui-tooltip-rounded'
                                 }
 			});
-			//$("div.projects-wrapper a[title]").tooltip();
+		});
+		</script>
+               <script type="text/javascript" charset="UTF-8" src="docs/js/libs/reflection.js"></script>
+
+        <script>
+		$(document).ready(function(){
+			$('body.section-projects img.tileImage').reflect();
 		});
 
 	            $("#logos ul li").hover(function() { //On hover...
@@ -260,6 +266,5 @@
 		            //Fade the image to full opacity 
 		            $(this).find("span").stop().fadeTo('normal', 1).show();
 	            });
-
         </script>
 </html>
