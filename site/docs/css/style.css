@@ -1161,6 +1161,7 @@ div.documentDescription #parent-fieldname-description {
 	font-size: 20px;
 	line-height: 1.36em;
 }
+
 /*		Tablet Layout: 768px.
 		Gutters: 24px.
 		Outer margins: 28px.
@@ -1480,6 +1481,11 @@ px      68    160    252    */
 		font-size: 14px;
 	}
 
+	#hqmap {
+		overflow: hidden;
+		width: 100%;
+	}
+
 }
 
 /*		Wide Mobile Layout: 480px.
@@ -1678,6 +1684,9 @@ px      68    160    252    344    436    */
 		display: none;
 	}
 
+	#hqmap {
+		text-align: center;
+	}
 
 
 }

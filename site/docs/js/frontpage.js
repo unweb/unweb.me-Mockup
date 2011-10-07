@@ -1,5 +1,13 @@
 $(document).ready(function(){
-  
+
+  /* IE FALLBACK FOR GRAPHS */
+  if ( $.browser.msie ) {
+      if ($.browser.version < 9) {
+          $('.slide:eq(0)').css('background', 'url("++theme++unweb.me/images/slider/slideshow_social_media.png") no-repeat scroll 440px center transparent');
+          $('.slide:eq(1)').css('background', 'url("++theme++unweb.me/images/slider/slideshow_business.png") no-repeat scroll 440px center transparent');
+          $('.slide:eq(2)').css('background', 'url("++theme++unweb.me/images/slider/slideshow_egovernment.png") no-repeat scroll 440px center transparent');
+      }
+  }
   /* SLIDESHOW */
   
   var currentPosition = 0,
@@ -8,7 +16,7 @@ $(document).ready(function(){
       container = $('#image-slider'),
       numberOfSlides = slides.length,
       resizeTimeout;
-  
+
   // Set sliding timeout.
   var autoSlideTimeout = setTimeout(function() {
     if (!container.hasClass('hover')) transition('right');
@@ -91,7 +99,7 @@ $(document).ready(function(){
       
       // Disable invisible sketches.
       $('.processing-canvas').each(function() {
-        var inst = Processing.getInstanceById($(this).attr('id'));
+        try{var inst = Processing.getInstanceById($(this).attr('id'));} catch(err){}
         if (inst != undefined)  { inst.noLoop(); }
       });
       try {
