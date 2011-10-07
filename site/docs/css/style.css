@@ -55,12 +55,16 @@ a img {border: 0;}
 	line-height: 26px;
 }
 
-.big, h4, h2.tileHeadline {
+.big, h4, h2.tileHeadline, #content div.documentDescription #parent-fieldname-description {
 	font-family: 'Conv_MavenPro-Regular', Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 24px;
 	text-decoration:none;
+}
+
+#content div.blog-item div.documentDescription #parent-fieldname-description {
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 .big-special {
@@ -446,11 +450,15 @@ body.section-about-us #content-core {
 body.section-about-us .column {
 	width:380px;
 	margin: 10px 0px 10px 15px;
+	padding: 0 18px 18px;
 }
 
+body.section-about-us h4.column-title {
+	padding-left: 87px;
+}
 
 body.section-about-us ul.medium {
-	margin-left:65px !important;
+	margin-left:87px !important;
 }
 
 #content h1.documentFirstHeading {
@@ -507,7 +515,7 @@ a:link, a:visited, #content-core a:link, #content-core a:visited {
 }
 
 #content-core {
-    width: 596px;
+    overflow: hidden;
 /*    min-height: 603px; */
 }
 
@@ -527,6 +535,7 @@ dl.portlet dt.portletHeader {
 #portal-column-two {
     float: right;
     margin-top: 82px;
+    margin-left: 40px;
     right: 0;
     width: 228px;
     background:transparent url(../../images/background-3.gif) repeat-y 0 0;
@@ -717,38 +726,37 @@ dl.portletTagCloudPortlet a{
 
 .we {
 	height: 30px;
-	padding-left: 65px;
+	padding-left: 87px;
 }
 
 .are {
-	background: url('../../images/icons/ppl.png') left center no-repeat;
+	background: url('../../images/icons/ppl.png') 25px center no-repeat;
 }
 
 .love {
-	background: url('../../images/icons/hart.png') left center no-repeat;
+	background: url('../../images/icons/hart.png') 25px center no-repeat;
 }
 
 .provide {
-	background: url('../../images/icons/diamant.png') left center no-repeat;
+	background: url('../../images/icons/diamant.png') 25px center no-repeat;
 }
 
 .collaborate {
-	padding-left: 65px;
-	background: url('../../images/icons/canoe.png') left center no-repeat;
+	background: url('../../images/icons/canoe.png') 15px center no-repeat;
 }
 
 /* Blog Section */
 
-#blog {
+.section-blog {
 	line-height: 1.46em;
 }
 
-#blog a {
+.section-blog a {
 	color:#4080d4;
 	text-decoration: none;
 }
 
-#blog a:hover {
+.section-blog a:hover {
 	text-decoration: underline;
 }
 
@@ -758,27 +766,22 @@ dl.portletTagCloudPortlet a{
 	border-bottom: 1px solid #cfcfcf;
 }
 
-#blog .post-properties {
+.section-blog .post-properties {
 	background: url("../../images/background-1.gif") repeat 0 0;
+    width:120px;
 	padding: 6px 0 6px 10px;
 	margin-left: 10px;
     margin-top:1em;
     float:right;
-	border-left: 1px solid #ccc;
 }
 
-#blog .post-date, #blog .post-tags {
+#blog-listing .post-properties {
+    margin-top:0;
+}
+
+.section-blog .post-date, .section-blog .post-tags {
     display: block;
-    height: 16px;
-    padding: 6px 24px;
-}
-
-#blog .post-date {
-	background: url('../../images/calendar_small.png') no-repeat 3px 5px;
-}
-
-#blog .post-tags {
-	background: url('../../images/tag_small.png') no-repeat 3px 5px;
+    padding-left: 15px;
 }
 
 .DocumentDescription {
@@ -919,7 +922,7 @@ body.section-projects .tileItem .tileBody, body.section-projects .tileItem .tile
     margin-left: 0;
     padding-top: 20px;
     padding-bottom: 10px;
-    width: 596px;
+    width: auto;
 }
 
 body.section-blog #parent-fieldname-description {
@@ -927,9 +930,9 @@ body.section-blog #parent-fieldname-description {
 }
 
 #content img.tileImage, #content div.newsImageContainer {
-    margin: 0;
     float: none;
     text-align: center;
+    margin: 0 0px 10px;
 }
 
 #content-core li, dl.portlet li, #portal-column-two li {
@@ -951,8 +954,9 @@ body.section-blog #parent-fieldname-description {
 }
 
 .section-solutions #portlets-below .cell {
-	width:298px;
-	padding: 0;
+	width: 25%;
+	padding: 4%;
+	float: left;
 }
 
 .solution-column {
@@ -987,6 +991,14 @@ body.section-blog #parent-fieldname-description {
 	width: 100%;
 	border-top:1px solid #aaa;
 	clear: both;
+}
+
+#footer-wrapper h1, #footer-wrapper h2, #footer-wrapper h3 {
+	color: #EFEFEF;
+}
+
+#footer-wrapper li {
+	display: block;
 }
 
 #footer-logo {
@@ -1043,7 +1055,7 @@ body.section-blog #parent-fieldname-description {
 
 .footer-detail {
 	float: right;
-	width: 356px;
+	width: 311px;
 }
 
 .footer-detail p {
@@ -1052,7 +1064,7 @@ body.section-blog #parent-fieldname-description {
 }
 
 .footer-detail ul {
-    margin-bottom:75px;
+    margin-bottom:40px;
 }
 
 .footer-detail img {
@@ -1084,6 +1096,11 @@ body.section-blog #parent-fieldname-description {
 
 #viewlet-below-content {
     clear: both;
+    padding-bottom: 1px;
+}
+
+#people a:link, #people a:visited {
+	color: #4D8ED4;
 }
 
 #people .column p {
@@ -1120,19 +1137,29 @@ body.section-blog #parent-fieldname-description {
 	line-height: 18px;
 }
 
-/*
-body.section-solutions #viewlet-below-content {
-    width: 228px;
-    background: url("../../images/background-3.gif") repeat-y scroll 0 0 transparent;
-    padding: 0 18px 5px;
-    position: absolute;
-    right: 0;
-    top: 84px;
+
+body.section-solutions #content-wrapper {
+	min-height: 360px;
+	padding-bottom: 50px;
 }
-*/
+
 
 #category {
-    width: 596px;
+    width: auto;
+}
+
+body.section-state-of-the-art-information-systems #content-core {
+	width: auto;
+	overflow: visible;
+}
+
+#content-core img {
+	max-width: 100%;
+}	
+
+div.documentDescription #parent-fieldname-description {
+	font-size: 20px;
+	line-height: 1.36em;
 }
 
 /*		Tablet Layout: 768px.
@@ -1168,7 +1195,7 @@ px      68    160    252    344    436    528    620    712    */
 	}
 	
 	#list-nav a {  
-		padding: 0 12px;
+		padding: 60px 12px;
 	}
 	
 	#slidesContainer {
@@ -1222,13 +1249,9 @@ px      68    160    252    344    436    528    620    712    */
 	}
 	
 	.we {
-		padding-left: 40px;
+		padding-left: 87px;
 	}
 
-	.collaborate {
-		padding-left: 64px;
-	}
-	
 	.project-column {
 		width:254px;
 	}
@@ -1243,7 +1266,12 @@ px      68    160    252    344    436    528    620    712    */
 	}
 	
 	.footer-detail {
-		width: 186px;
+		width: 297px;
+	}
+
+	body.section-about-us .column {
+    		margin: 10px 10px 10px 0;
+    		width: 320px;
 	}
 }
 
@@ -1257,7 +1285,7 @@ px      68    160    252    344    436    528    620    712    */
 cols    1     2      3
 px      68    160    252    */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 480px) {
 	
 	body {
 		font: 11px/18px Helvetica, Arial, serif;
@@ -1272,7 +1300,7 @@ px      68    160    252    */
 		font-size: 12px;
 	}
 
-	#header, #search-bar, #image-slider, .section, #footer, .hr, #content-wrapper, #content-core {
+	#header, #search-bar, #image-slider, .section, #footer, .hr, #content-wrapper {
 		width: 320px;
 	}
 	
@@ -1291,6 +1319,11 @@ px      68    160    252    */
 		padding: 50px 0;
 		text-align: center;
         }
+	
+	#footer iframe {
+		width: 90%; 
+		margin: 15px;
+	}
 
 	#nav {
 		clear: both;
@@ -1308,12 +1341,17 @@ px      68    160    252    */
 	
 	#slidesContainer {
 		width:320px;
-		height:460px;
+		height:500px;
 	}
 	
+	.slide {
+		font-size: 14px;
+		line-height: 18px;
+	}
+
 	.slide canvas {
 		left: 18px;
-		top: 180px;
+		top: 240px;
 		width: 280px;
 		height: 280px;
 	}
@@ -1377,13 +1415,9 @@ px      68    160    252    */
 	}
 	
 	.we {
-		padding-left: 40px;
+		padding-left: 87px;
 	}
 
-	.collaborate {
-		padding-left: 64px;
-	}
-	
 	.project-column, .default-project, .plone-project, .python-project {
 		width:300px;
 		padding: 10px 0;
@@ -1413,8 +1447,45 @@ px      68    160    252    */
 	}
 	
 	.footer-detail {
-		width: 92px;
+		width: 97%;
+		float: right;
 	}
+
+	.footer-detail h3 {
+		padding: 0;
+	}
+
+	#twtr-widget-1 .twtr-bd .twtr-timeline {
+    		background-image: none !important;
+	}
+
+	.twtr-tweets {
+   	 	background-color: transparent;
+	}
+
+	#portal-column-two {
+		display:none;
+	}
+
+	#content-core {
+		width: auto;
+	}
+
+        body.section-about-us .column {
+                margin: 10px;
+                width: 260px;
+        }
+
+	body.section-solutions #portlets-below dt.portletHeader {
+		padding: 0;
+		font-size: 14px;
+	}
+
+	#hqmap {
+		overflow: hidden;
+		width: 100%;
+	}
+
 }
 
 /*		Wide Mobile Layout: 480px.
@@ -1445,11 +1516,31 @@ px      68    160    252    344    436    */
 	}
 	
 	#footer-nav {
-		width: 100px;
+		width:  auto;
+		margin-right:17% !important;
+		padding: 20px 0;
 	}
 
 	#footer-logo {
 		width: 390px;
+		margin-left: 20% !important;
+	}
+
+	#footer iframe {
+		width: 90%;
+		margin: auto;
+	}
+
+	.footer-section {
+		overflow: hidden;
+	}
+
+	.footer-detail {
+		margin: 30px 14%;
+	}
+
+	.footer-detail h3 {
+		padding: 0;
 	}
 
 	#header-logo {
@@ -1469,12 +1560,12 @@ px      68    160    252    344    436    */
 	}
 	
 	#list-nav a {  
-		padding: 0 12px;
+		padding: 60px 12px;
 	}
 	
 	#slidesContainer {
 		width:480px;
-		height:260px;
+		height:320px;
 	}
 	
 	.slide canvas {
@@ -1482,6 +1573,10 @@ px      68    160    252    344    436    */
 		top: 10px;
 		width: 240px;
 		height: 240px;
+	}
+
+	.slide {
+		font-size: 13px;
 	}
 	
 	#leftControl {
@@ -1543,11 +1638,11 @@ px      68    160    252    344    436    */
 	}
 	
 	.we {
-		padding-left: 40px;
+		padding-left: 87px;
 	}
 
 	.collaborate {
-		padding-left: 64px;
+		padding-left: 87px;
 	}
 	
 	.project-column, .default-project, .plone-project, .python-project {
@@ -1568,6 +1663,32 @@ px      68    160    252    344    436    */
 		width: 320px;
 		height: auto;
 	}
+
+        #twtr-widget-1 .twtr-bd .twtr-timeline {
+                background-image: none !important;
+        }
+
+        .twtr-tweets {
+                background-color: transparent;
+        }
+
+        body.section-projects .tileItem {
+                margin: 32px 70px 16px;
+        }
+
+        #content-core {
+        	width: auto;
+	}
+
+	#portal-column-two {
+		display: none;
+	}
+
+	#hqmap {
+		text-align: center;
+	}
+
+
 }
 
 /*		Hi-Res Layout.
@@ -1611,6 +1732,12 @@ px      68    160    252    344    436    */
 	
 	.slide {
 		width: 1024px;
+		font-size: 18px;
+		line-height: 1.3;
+	}
+
+	.slide-text {
+		padding: 40px;
 	}
 	
 	.slide canvas {
@@ -1657,5 +1784,25 @@ px      68    160    252    344    436    */
 	
 	h3, .bigger {
 		font-size: 24px;
+	}
+
+	.footer-detail {
+        	width: 325px;
+	}
+
+	body.section-projects .tileItem {
+		margin: 32px 20px 16px;
+	}
+
+	#content-core {
+		width: 700px;
+	}
+
+	body.section-about-us #content-core {
+                width: auto;
+        }
+
+	body.section-about-us .column {
+    		width: 420px;
 	}
 }
