@@ -63,6 +63,10 @@ a img {border: 0;}
 	text-decoration:none;
 }
 
+#content div.blog-item div.documentDescription #parent-fieldname-description {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
 .big-special {
 	font-family: Georgia;
 	font-weight: normal;
@@ -764,25 +768,20 @@ dl.portletTagCloudPortlet a{
 
 .section-blog .post-properties {
 	background: url("../../images/background-1.gif") repeat 0 0;
+    width:120px;
 	padding: 6px 0 6px 10px;
 	margin-left: 10px;
     margin-top:1em;
     float:right;
-	border-left: 1px solid #ccc;
+}
+
+#blog-listing .post-properties {
+    margin-top:0;
 }
 
 .section-blog .post-date, .section-blog .post-tags {
     display: block;
-    height: 16px;
-    padding: 6px 24px;
-}
-
-.section-blog .post-date {
-	background: url('../../images/calendar_small.png') no-repeat 3px 5px;
-}
-
-.section-blog .post-tags {
-	background: url('../../images/tag_small.png') no-repeat 3px 5px;
+    padding-left: 15px;
 }
 
 .DocumentDescription {
