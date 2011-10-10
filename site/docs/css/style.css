@@ -1693,6 +1693,22 @@ px      68    160    252    */
         overflow: hidden;
         width: 100%;
     }
+	
+	.are {
+	    background: url('../../images/icons/ppl.png') 12px 0 no-repeat;
+	}
+	
+	.love {
+		background: url('../../images/icons/hart.png') 12px 0 no-repeat;
+	}
+	
+	.provide {
+		background: url('../../images/icons/diamant.png') 12px 0 no-repeat;
+	}
+	
+	.collaborate {
+		background: url('../../images/icons/canoe.png') 10px 0 no-repeat;
+	}
 
 }
 /*      Hi-Res Layout.
