@@ -1,12 +1,11 @@
 $(document).ready(function(){
 
   /* IE FALLBACK FOR GRAPHS */
-  if ( $.browser.msie ) {
-      if ($.browser.version < 9) {
-          $('.slide:eq(0)').css('background', 'url("++theme++unweb.me/images/slider/slideshow_social_media.png") no-repeat scroll 440px center transparent');
-          $('.slide:eq(1)').css('background', 'url("++theme++unweb.me/images/slider/slideshow_business.png") no-repeat scroll 440px center transparent');
-          $('.slide:eq(2)').css('background', 'url("++theme++unweb.me/images/slider/slideshow_egovernment.png") no-repeat scroll 440px center transparent');
-      }
+  if ( $.browser.msie && $.browser.version < 9 || $(window).width()<700) {
+      $('canvas').remove();
+      $('.slide:eq(0)').css('background-image', 'url("++theme++unweb.me/images/slider/slideshow_social_media.png")');
+      $('.slide:eq(1)').css('background-image', 'url("++theme++unweb.me/images/slider/slideshow_business.png")');
+      $('.slide:eq(2)').css('background-image', 'url("++theme++unweb.me/images/slider/slideshow_egovernment.png")');
   } else {
     var pi1 = new Processing(document.getElementById("canvas0"), sl1),
       pi2 = new Processing(document.getElementById("canvas1"), sl2),
@@ -14,6 +13,7 @@ $(document).ready(function(){
       pi2.noLoop();
       pi3.noLoop();
   }
+
   /* SLIDESHOW */
          
   var currentPosition = 0,
@@ -29,7 +29,7 @@ $(document).ready(function(){
   var autoSlideTimeout = setTimeout(function() {
     if (!container.hasClass('hover')) transition('right');
         refreshTimeout();
-  }, 6000);
+  }, 7000);
   
   // Slide down container
   container.slideDown(500);
@@ -121,7 +121,7 @@ $(document).ready(function(){
       autoSlideTimeout = setTimeout(function() {
         if (!container.hasClass('hover')) transition('right');
         refreshTimeout();
-      }, 6000);
+      }, 7000);
     }
     
     // Bind to resize event
