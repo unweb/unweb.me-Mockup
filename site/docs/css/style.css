@@ -1259,11 +1259,21 @@ px      68    160    252    344    436    528    620    712    */
     .solution-column {
         width: 256px;
     }
-    
-    .solutions-image {
-        width: 256px;
-        height: auto;
-    }
+	
+	#col-1 {
+		position: relative;
+		left: -40px;
+	}
+	
+	#col-2 {
+		position: relative;
+		left: -10px;
+	}
+	
+	#col-3 {
+		position: relative;
+		left: 20px;
+	}
     
     .footer-detail {
         width: 297px;
