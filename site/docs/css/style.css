@@ -1286,17 +1286,17 @@ px      68    160    252    344    436    528    620    712    */
         width: 256px;
     }
 	
-	#col-1 {
+	body.section-solutions #col-1 {
 		position: relative;
 		left: -40px;
 	}
 	
-	#col-2 {
+	body.section-solutions #col-2 {
 		position: relative;
 		left: -10px;
 	}
 	
-	#col-3 {
+	body.section-solutions #col-3 {
 		position: relative;
 		left: 20px;
 	}
