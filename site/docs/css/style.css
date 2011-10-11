@@ -356,6 +356,8 @@ body.section-state-of-the-art-information-systems #image-slider {
   width:896px;
   height:320px;
   position:relative;
+  background-repeat: no-repeat;
+  background-position: 440px center;
 }
 
 .slide canvas {
@@ -517,6 +519,26 @@ a:link, a:visited, #content-core a:link, #content-core a:visited {
 #content-core {
     overflow: hidden;
 /*    min-height: 603px; */
+}
+
+.template-search #content-core {
+    overflow: visible;
+}
+
+
+#content h1.documentFirstHeading span.discreet {
+	color: #EFEFEF;
+	font-size: 70%;
+}
+
+#content div.listingBar a:hover {
+	background-color: #4D8ED4;
+        color: #EFEFEF !important;
+	text-decoration: none;
+}
+
+#content div.listingBar a {
+	border-bottom: 0.1em solid #CCCCCC !important;
 }
 
 dl.portlet {
@@ -1207,6 +1229,10 @@ px      68    160    252    344    436    528    620    712    */
         left: 380px;
     }
     
+    .slide {
+	background-position: 360px 0;
+    }
+
     .bigger, h3, #portlets-below dt.portletHeader {
         font-size: 20px;
         line-height: 24px;
@@ -1253,7 +1279,7 @@ px      68    160    252    344    436    528    620    712    */
     }
 
     .project-column {
-        width:254px;
+        width:238px;
     }
     
     .solution-column {
@@ -1283,6 +1309,11 @@ px      68    160    252    344    436    528    620    712    */
             margin: 10px 10px 10px 0;
             width: 320px;
     }
+
+    .project-column, .solution-column, body.section-projects .tileItem {
+	margin: 32px 40px 17px;
+	padding: 20px 25px 10px 33px;
+    }
 }
 
 
@@ -1310,7 +1341,7 @@ px      68    160    252    344    436    */
         font-size: 14px;
     }
 
-    #header, #search-bar, #image-slider, .section, #footer, .hr, #content-wrapper, #content-core {
+    #header, #search-bar, #image-slider, .section, #footer, .hr, #content-wrapper {
         width: 480px;
     }
     
@@ -1377,6 +1408,7 @@ px      68    160    252    344    436    */
 
     .slide {
         font-size: 13px;
+	background-position: 180px 0;
     }
     
     #leftControl {
@@ -1390,6 +1422,10 @@ px      68    160    252    344    436    */
         font-size: 18px;
         line-height: 22px;
         padding: 16px;
+    }
+
+    .section-solutions #portlets-below dt.portletHeader {
+	padding: 16px 0;
     }
     
     .big, h4, h2.tileHeadline {
@@ -1565,6 +1601,8 @@ px      68    160    252    */
     .slide {
         font-size: 14px;
         line-height: 18px;
+	background-position: -25px 225px;
+	height: 500px;
     }
 
     .slide canvas {
@@ -1666,7 +1704,7 @@ px      68    160    252    */
     
     .footer-detail {
         width: 97%;
-        float: right;
+        float: none;
     }
 
     .footer-detail h3 {
