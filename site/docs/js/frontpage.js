@@ -7,15 +7,23 @@ $(document).ready(function(){
           $('.slide:eq(1)').css('background', 'url("++theme++unweb.me/images/slider/slideshow_business.png") no-repeat scroll 440px center transparent');
           $('.slide:eq(2)').css('background', 'url("++theme++unweb.me/images/slider/slideshow_egovernment.png") no-repeat scroll 440px center transparent');
       }
+  } else {
+    var pi1 = new Processing(document.getElementById("canvas0"), sl1),
+      pi2 = new Processing(document.getElementById("canvas1"), sl2),
+      pi3 = new Processing(document.getElementById("canvas2"), sl3);
+      pi2.noLoop();
+      pi3.noLoop();
   }
   /* SLIDESHOW */
-  
+         
   var currentPosition = 0,
       slides = $('.slide'),
       slideWidth = slides.outerWidth(true),
       container = $('#image-slider'),
       numberOfSlides = slides.length,
       resizeTimeout;
+      
+  
 
   // Set sliding timeout.
   var autoSlideTimeout = setTimeout(function() {
