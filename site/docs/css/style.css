@@ -974,6 +974,7 @@ body.section-blog #parent-fieldname-description {
     border-bottom: 1px solid #ccc;
     text-align: center;
     display: block;
+	background: #f6f6f6;
 }
 
 .section-solutions #portlets-below .cell {
@@ -984,7 +985,7 @@ body.section-blog #parent-fieldname-description {
 
 .solution-column {
     text-align: left;
-    margin-top: 6px;
+    margin-top: 0;
 }
 
 .solution-column p {
@@ -999,7 +1000,8 @@ body.section-blog #parent-fieldname-description {
 
 .solutions-image-wrapper {
     width: 100%;
-    padding: 20px 0 10px 0;
+    padding: 60px 0 16px 0;
+	border-bottom: 1px solid #ccc;
 }
 
 .solutions-image {
@@ -1285,33 +1287,22 @@ px      68    160    252    344    436    528    620    712    */
     
     .solution-column {
         width: 256px;
+		margin: 0;
+		overflow: hidden;
     }
 	
-	body.section-solutions #col-1 {
-		position: relative;
-		left: -40px;
-	}
 	
-	body.section-solutions #col-2 {
-		position: relative;
-		left: -10px;
-	}
-	
-	body.section-solutions #col-3 {
-		position: relative;
-		left: 20px;
-	}
     
     .footer-detail {
         width: 297px;
     }
 
     body.section-about-us .column {
-            margin: 10px 10px 10px 0;
-            width: 320px;
+        margin: 10px 10px 10px 0;
+        width: 320px;
     }
 
-    .project-column, .solution-column, body.section-projects .tileItem {
+    .project-column, body.section-projects .tileItem {
 	margin: 32px 40px 17px;
 	padding: 20px 25px 10px 33px;
     }
@@ -1493,12 +1484,8 @@ px      68    160    252    344    436    */
     }
     
     .solution-column {
-        width: 460px;
-    }
-    
-    .solutions-image {
-        width: 320px;
-        height: auto;
+        width: 480px;
+		padding: 0;
     }
 
         #twtr-widget-1 .twtr-bd .twtr-timeline {
@@ -1602,8 +1589,8 @@ px      68    160    252    */
     .slide {
         font-size: 14px;
         line-height: 18px;
-	background-position: -25px 225px;
-	height: 500px;
+		background-position: -25px 225px;
+		height: 500px;
     }
 
     .slide canvas {
@@ -1686,12 +1673,8 @@ px      68    160    252    */
     }
     
     .solution-column {
-        width: 300px;
-    }
-    
-    .solutions-image {
-        width: 300px;
-        height: auto;
+        width: 320px;
+		margin: 0;
     }
     
     #footer-nav {
@@ -1850,7 +1833,7 @@ px      68    160    252    */
     }
     
     .solution-column {
-        width: 340px;
+        width: 341px;
     }
     
     #logos li {
