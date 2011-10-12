@@ -1813,6 +1813,13 @@ px      68    160    252    */
         left: 590px;
         top: 30px;
     }
+	
+	#leftControl {
+        top:180px;
+    }
+    #rightControl {
+        top:180px;
+    }
     
     .section-title {
         padding: 36px 22px;
