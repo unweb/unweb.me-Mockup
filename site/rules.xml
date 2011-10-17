@@ -67,32 +67,32 @@
     <drop content='//*[@id="parent-fieldname-title"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
     <drop content='//*[@id="parent-fieldname-description"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-state-of-the-art-information-systems ')])" />
 
-    <!-- fix canvas data processing sources that are ignored normally by diazo -->
-    <replace css:theme="#canvas0">
-	<canvas id="canvas0" class="processing-canvas" data-processing-sources="++theme++unweb.me/docs/slide1/slide1.pde"></canvas>
-    </replace>
-    <replace css:theme="#canvas1">
-	<canvas id="canvas1" class="processing-canvas" data-processing-sources="++theme++unweb.me/docs/slide2/slide2.pde"></canvas>
-    </replace>
-    <replace css:theme="#canvas2">
-	<canvas id="canvas2" class="processing-canvas" data-processing-sources="++theme++unweb.me/docs/slide3/slide3.pde"></canvas>
-    </replace>
-
     <!-- section solutions -->
     <prepend content='//*[@id="portal-column-two"]' theme='//*[@id="content-wrapper"]' if-content="(/html/body[contains(concat(' ',normalize-space(@class),' '),' section-solutions ')])" />
-    <!--replace css:content='body.section-solutions #portlets-below dd.portletItem'>
-	<dd class="portletItem">
-	<xsl:for-each css:select="a">
-	<a class="tile">
-                <xsl:attribute name="href">
-                        <xsl:value-of select="@href" />
-                </xsl:attribute>
-		<h4><xsl:copy-of select="text()" /></h4>
-		<p> <xsl:value-of select="@title" /> </p>
-        </a>
+    <replace css:content='body.section-solutions #portlets-below'>
+	<xsl:for-each css:select=".cell">
+		<div id="column" class="column solution-column">
+			<xsl:if test="(div/dl[contains(normalize-space(@class),'social')])"><xsl:attribute name="id">column-socialmedia</xsl:attribute></xsl:if>
+			<xsl:if test="(div/dl[contains(normalize-space(@class),'business')])"><xsl:attribute name="id">column-business</xsl:attribute></xsl:if>
+			<xsl:if test="(div/dl[contains(normalize-space(@class),'government')])"><xsl:attribute name="id">column-egov</xsl:attribute></xsl:if>
+			<h3 class="dotted-bg solutions-title"><xsl:copy-of css:select=".portletHeader span" /></h3>
+			<div class="solutions-image-wrapper dotted-bg">
+				<xsl:if test="(div/dl[contains(normalize-space(@class),'social')])"><img class="solutions-image" src="++theme++unweb.me/images/solutions/persp1.png"/></xsl:if>
+				<xsl:if test="(div/dl[contains(normalize-space(@class),'business')])"><img class="solutions-image" src="++theme++unweb.me/images/solutions/persp2.png"/></xsl:if>
+				<xsl:if test="(div/dl[contains(normalize-space(@class),'government')])"><img class="solutions-image" src="++theme++unweb.me/images/solutions/persp3.png"/></xsl:if>
+			</div>
+						
+			<ul>
+			<xsl:for-each css:select="dd">
+				<li>
+					<xsl:copy-of css:select="a" />
+				</li>
+			</xsl:for-each>
+			</ul>
+		</div>
+
 	</xsl:for-each>
-	</dd>
-    </replace-->
+    </replace>
 
 
    <!-- projects .portlet-collection-open-source -->

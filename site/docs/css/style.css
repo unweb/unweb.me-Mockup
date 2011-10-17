@@ -998,6 +998,16 @@ body.section-blog #parent-fieldname-description {
     padding: 12px;
 }
 
+.solution-column ul li {
+	display: list-item;
+	padding: 10px 28px;
+	font-size: 15px;
+}
+
+.solution-column ul li a {
+	color: #444444;
+}
+
 .solutions-image-wrapper {
     width: 100%;
     padding: 60px 0 16px 0;
@@ -1164,7 +1174,7 @@ body.section-blog #parent-fieldname-description {
 
 
 body.section-solutions #content-wrapper {
-    min-height: 360px;
+    overflow: hidden;
     padding-bottom: 50px;
 }
 
@@ -1515,6 +1525,10 @@ px      68    160    252    344    436    */
     #footer-nav li {
         padding: 0 0 0 43px;
     }
+
+        .solution-column ul li {
+                padding: 10px 100px;
+        }
 
 
 }

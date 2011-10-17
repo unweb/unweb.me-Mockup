@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   /* IE FALLBACK FOR GRAPHS */
-  if ( $.browser.msie && $.browser.version < 9 || $(window).width()<700) {
+  if ( $.browser.msie && $.browser.version < 9 || $(window).width()<600) {
       $('canvas').remove();
       $('.slide:eq(0)').css('background-image', 'url("++theme++unweb.me/images/slider/slideshow_social_media.png")');
       $('.slide:eq(1)').css('background-image', 'url("++theme++unweb.me/images/slider/slideshow_business.png")');
