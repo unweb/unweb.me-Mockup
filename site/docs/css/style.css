@@ -1197,6 +1197,11 @@ div.documentDescription #parent-fieldname-description {
     line-height: 1.36em;
 }
 
+dl.portalMessage {
+	clear: left;
+	width: auto;
+}
+
 /*      Tablet Layout: 768px.
         Gutters: 24px.
         Outer margins: 28px.
